@@ -3,15 +3,17 @@ $h: em(2);
 
 .toggle-menu-mobile {
 	display: block;
-	height: $h* 12;
+	height: rem(50);
 	position: relative;
-	color: $primary;
-	font-size: 32px;
-	width: 1em;
+	color: $body-color;
+	font-size: 20px;
+	width: rem(50);
 	cursor: pointer;
-	&.on {
-		color: #ffffff;
-	}
+	border-radius: 50%;
+	background-color: #F1F2F0;
+	// &.on {
+	// 	color: #ffffff;
+	// }
 
 	span:after,
 	span:before {
@@ -21,17 +23,17 @@ $h: em(2);
 	}
 
 	span {
-		@include a-cent(y);
+		@include a-cent;
 	}
 
 	span:before {
 
 
-		top: $h * 2;
+		top: 6px;
 	}
 
 	span:after {
-		bottom: $h * 2;
+		bottom: 6px;
 	}
 
 	span { 
@@ -43,11 +45,11 @@ $h: em(2);
 	span:before {
 		// width: 32px;
 		width: 1em;
-		height: $h;
+		height: 2px;
 		background-color: currentColor;
 		transition: all 0.3s;
 		backface-visibility: hidden;
-		border-radius: 6px;
+		border-radius: 0;
 		transform-origin: 50% 50%;
 	}
 
@@ -81,11 +83,13 @@ $h: em(2);
 	z-index: 999;
 	max-width: 85%;
 	height: calc(var(--vh, 1vh) * 100);
-	width: 280px;
+	width: 100%;
+	max-width: 720px;
 	top: 0;
 	// left: 0;
 	right: 0;
-	background-color: #c3c3c3;
+	background-color: $white;
+
 	&:not(.active){
 		transform: translate3d(120%, 0,0);
 		--opacity: 0;

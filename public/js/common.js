@@ -112,9 +112,8 @@ const JSCCommon = {
 		document.addEventListener('mouseup', event => {
 			let container = event.target.closest(".menu-mobile--js.active"); // (1)
 
-			let link = event.target.closest(".menu as"); // (1)
-
-			if (!container || link) this.closeMenu();
+			let link = event.target.closest(".menu a"); // (1)
+			// if (!container || link) this.closeMenu();
 		}, {
 			passive: true
 		});
@@ -337,7 +336,30 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true
-	})); // modal window
+	}));
+	const headerSlider = new Swiper('.headerBlock__slider--js', {
+		watchOverflow: true,
+		spaceBetween: 0,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true // renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+
+		},
+		slidesPerView: 1,
+		// freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.7,
+		slideToClickedSlide: true // freeModeMomentum: true,
+
+	}); // modal window
 }
 
 ;

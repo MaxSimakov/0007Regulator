@@ -24,7 +24,23 @@ html(lang="ru")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		//- meta(name="viewport", content="width=device-width, shrink-to-fit=no")
 		//- meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,  shrink-to-fit=no")
-		meta(name="viewport", content="width=device-width,initial-scale=1.0,  shrink-to-fit=no")
+		meta(name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no")
+		script.
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 570 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
 		link(type="image/ico", href='img/favicon.ico', rel='shortcut icon') 
 		<meta name="format-detection" content="telephone=no"> 
 		+allcss()

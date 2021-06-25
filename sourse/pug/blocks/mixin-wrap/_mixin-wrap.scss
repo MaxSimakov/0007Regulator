@@ -15,13 +15,18 @@
 		}
 		
 	}
-	.icon{
-		font-size: rem(30);
-	}
-	 
+	
 
+	.icon-viber {
+		color: $purple;
+	}
+	.icon-whatsapp {
+		color: #40A86F;
+	}
+	.icon-telegram {
+		color: #3BA4C4;
+	}
 }
- 
 
 .counter{
 	counter-reset: num;

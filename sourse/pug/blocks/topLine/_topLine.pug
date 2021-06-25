@@ -1,9 +1,25 @@
 mixin topLine()
 	// start topLine
-	+b.SECTION.topLine.section#topLine&attributes(attributes)
+	+b.topLine#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
-			.row
+			.row.align-items-center
+				.col.col-sm-auto
+					+e.logo(href="#")
+						img(src="img/@2x/logo.png", alt="")
+				.col.d-none.d-md-block
+					+e.questionnaire(href="#")
+						+icon('question')
+						span Опросный лист
+				.col-auto.d-none.d-md-block
+					+soc()
+				.col.col-md-auto
+					+e.contacts
+						+e.tel(href='tel:8 800 400 55 44') 8 (800) 400 55 44
+						+e.mail.d-none.d-lg-block(href='mailto:info@regulator-gce.ru') info@regulator-gce.ru
+						+e.order.d-lg-none(href='#') Заказать звонок
+				.col-auto.d-none.d-lg-block
+					+b.btn-sm.btn.btn-outline-warning(href='#') Заказать звонок
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js
+						span
 	// end topLine

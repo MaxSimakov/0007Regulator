@@ -8,11 +8,11 @@
 	left: 0;
 	z-index: 800;
 	background-color: #fff;
-	border-bottom: 1px solid #000; 
-	--color-link: 255,
-	0,
-	0;
-	background-color: #{rgba(var(--color-link), .5)};
+	// border-bottom: 1px solid #000; 
+	// --color-link: 255,
+	// 0,
+	// 0;
+	// background-color: #{rgba(var(--color-link), .5)};
 	&.fixed { 
 		bottom: auto;
 		margin-top: 0;
