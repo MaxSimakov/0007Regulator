@@ -1,0 +1,25 @@
+mixin sDocumetation(data)
+	// start sDocumetation
+	+b.SECTION.sDocumetation.section#sDocumetation&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Разрешительные документы
+			+e.sliderWrap
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin slide
+							+e.slide.swiper-slide(href="img/@2x/document.jpg" data-fancybox="documetation")
+								+pic('document.jpg','','')
+								+e.zoom 
+									+icon('visibility')
+						+slide
+						+slide
+						+slide
+						+slide
+						+slide
+						+slide
+						+slide
+						+slide
+					.swiper-pagination
+				+arrow().d-none.d-lg-grid
+	// end sDocumetation

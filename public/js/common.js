@@ -277,7 +277,8 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
+	JSCCommon.animateScroll();
+	JSCCommon.getCurrentYear('.year'); // JSCCommon.CustomInputFile(); 
 
 	var x = window.location.host;
 	let screenName;
@@ -314,7 +315,6 @@ function eventHandler() {
 			loadPrevNext: true
 		},
 		watchOverflow: true,
-		spaceBetween: 0,
 		loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -359,7 +359,35 @@ function eventHandler() {
 		touchRatio: 0.7,
 		slideToClickedSlide: true // freeModeMomentum: true,
 
-	}); // modal window
+	});
+	const sDocumetationSlider = new Swiper('.sDocumetation__slider--js', {
+		// slidesPerView: 5,
+		slidesPerView: 2,
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		spaceBetween: 12,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 24
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30
+			}
+		},
+		pagination: {
+			el: '.sDocumetation .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+		navigation: {
+			nextEl: '.sDocumetation .swiper-button-next',
+			prevEl: '.sDocumetation .swiper-button-prev'
+		}
+	});
 }
 
 ;

@@ -2,8 +2,69 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			.text-center
+				+b.section-title
+					h2 Контактная 
+						span.text-primary информация
+				p Вы можете связаться с нами в мессенджерах:
+				+e.btns-row.row.justify-content-center
+					+e.btn-col.col-auto
+						+e.btn--wa(href='#')
+							+icon('whatsapp')
+							span Whatsapp
+					+e.btn-col.col-auto
+						+e.btn--vb(href='#')
+							+icon('viber')
+							span Viber
+					+e.btn-col.col-auto
+						+e.btn--tg(href='#')
+							+icon('telegram')
+							span Telegram
+				+e.txt или позвонить по телефону:
+				+e.tel(href='tel:+7(920)0162999') +7 (920) 016-29-99
+		+b.mapWrap 
+			+e.map#map
+				<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+				script.
+					ymaps.ready(function () {
+					var myMap = new ymaps.Map('map', {
+						center: [56.250197, 43.93],
+						zoom: 16
+							}, {
+								searchControlProvider: 'yandex#search'
+							}),
+
+							myPlacemark = new ymaps.Placemark([56.250197, 43.936412], {
+								hintContent: 'Собственный значок метки',
+								balloonContent: 'Это красивая метка'
+							}, {
+								// Опции.
+								// Необходимо указать данный тип макета.
+								iconLayout: 'default#image',
+								// Своё изображение иконки метки.
+								iconImageHref: 'img/svg/mark.svg',
+								// Размеры метки.
+								iconImageSize: [60, 60],
+								// Смещение левого верхнего угла иконки относительно
+								// её "ножки" (точки привязки).
+								iconImageOffset: [-30, -65]
+							});
+					myMap.behaviors.disable('scrollZoom');
+					
+					//на мобильных устройствах... (проверяем по userAgent браузера)
+					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+							//... отключаем перетаскивание карты
+							myMap.behaviors.disable('drag');
+					}
+
+					myMap.geoObjects
+						.add(myPlacemark);
+					});
+			//- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7d9fde9f456413f4844ab85896c1261da6b7319cac10d4614357de6b73250aa6&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+			+e.mapDescr
+				strong Адрес:
+				p Нижний Новгород, ул. Окская гавань, д. 3
+				strong Режим работы:
+				p Пн-Пт: 9:00 - 18:00<br> Сб: 9:00 - 14:00<br> Вс: выходной
+
 	// end sContact

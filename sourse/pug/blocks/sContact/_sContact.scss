@@ -1,29 +1,186 @@
+// start .sContact
+.sContact {
+	--sPB: 0;
 
-	// start .sContact
-	.sContact {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
+
+	&__btn {
+		width: 100%;
+		width: rem(144);
+		@include media-breakpoint-up(md) {
+		}
+		@include media-breakpoint-up(lg) {
+			width: rem(224);
+		}
+		@include media-breakpoint-up(xxl) {
+			width: rem(260);
+		}
+		// flex-grow: 1;
+		border-radius: rem(5);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		font-weight: bold;
+		@include media-breakpoint-up(xl) {
+			font-size: rem(18);
+		}
+		padding: 10px 17px;
+		line-height: 1.2;
+
+		color: $white !important;
+		&:hover {
+			color: $white !important;
+		}
+		.icon {
+			color: $white;
+			font-size: rem(30);
+			margin-right: rem(12);
+			flex-shrink: 0;
+		}
+
+		@extend .btn;
+		@extend .blesk;
+		&--wa {
+			background: #25d366;
+		}
+		&--vb {
+			background: #665cac;
+		}
+		&--tg {
+			background: #139bd0;
+		}
+	}
+	&__btns-row {
+		padding-bottom: rem(30);
+	}
+	&__tel {
+		display: inline-block;
+		font-size: rem(36);
+		margin-bottom: rem(51);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(42);
+			margin-bottom: rem(61);
+		}
+		font-weight: bold;
+		color: $gray-900 !important;
+		border-bottom: solid 4px $primary;
+
+		&:hover {
+			border-color: transparent;
+		}
+
+	}
+
+
+	&__mapWrap {
+		position: relative;
+		width: 100%;
+		min-height: 460px;
+		display: flex;
+		flex-direction: column;
+		
+	}
+
+	iframe, script {
+		flex-grow: 1;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__ {}
+	&__ {}
+
 	@include media-breakpoint-up(xs) {}
-	
-	//
 	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
 	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sContact
+
+@keyframes btnAnimLight {
+	0% {
+		left: -8.75em;
+	}
+	30% {
+		left: 110%;
+	}
+	40% {
+		left: 100%;
+		opacity: 0;
+	}
+	41% {
+		left: -8.75em;
+	}
+	to {
+		left: -8.75em;
+	}
+}
+
+.blesk {
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 2;
+		left: -8.75em;
+		border-left: 2.5em solid #fff;
+		animation: btnAnimLight 2.5s linear infinite;
+		transition: opacity 3s linear;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0.2;
+		width: 0.0625em;
+		height: 0.0625em;
+		box-shadow: 0 0 1.875em 4.375em #fff;
+	}
+}
+
+.mapWrap {
+	position: relative;
+	border-radius: 0 0 15px 15px;
+	overflow: hidden;
+
+	&__mapDescr {
+		left: 20%;
+		background: #ffffff;
+		box-shadow: 0px 10px 15px rgba(53, 57, 63, 0.15);
+		border-radius: 15px;
+		padding: rem(40) rem(20) rem(40) rem(20);
+		@include media-breakpoint-up(md) {
+			@include a-cent1(y);
+			padding: rem(50) rem(20) rem(50) rem(40);
+			max-width: 291px;
+		}
+
+		@include media-breakpoint-down(md) {
+			text-align: center;
+		}
+
+
+		strong {
+			color: $primary;
+			margin-bottom: rem(12);
+			display: block;
+		}
+		p {
+			margin-bottom: rem(20);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// > ymaps,
+	// > ymaps,
+	// > ymaps > ymaps {
+	// 	height: rem(425) !important;
+	// }
+}
+
+#map {
+	@include media-breakpoint-up(md) {
+		height: rem(460);
+	}
+}

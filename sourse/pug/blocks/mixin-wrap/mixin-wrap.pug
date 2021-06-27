@@ -11,9 +11,9 @@ include components/btn.pug
 
 
 mixin arrow()
-	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev&attributes(attributes)
 		+icon('chevron-left')
-	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+	.swiper-button-hand.swiper-button-hand-next.swiper-button-next&attributes(attributes)
 		+icon('chevron-right')
 //- /arrow for swiper-slider
 

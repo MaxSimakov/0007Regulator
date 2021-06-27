@@ -1,9 +1,20 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		+pic('form-bg.jpg','','').picture-bg
 		.container
-			+b.section-title.text-center
-				h2 sForm
+			.row.align-items-center
+				+e.txtCol.col-lg
+					+b.section-title
+						h2 Не нашли интересующую вас продукцию?
+					p Сделайте запрос и&nbsp;мы&nbsp;осуществим доставку продукции на&nbsp;склад.
+				.col-lg
+					+form-wrap().text-center
+						h3 Сделать запрос
+						p Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в ближайшее время
+						+input('Ваше имя')
+						+input('Ваш телефон','tel')
+						+e.btn.btn.btn-primary(type="submit") Отправить
+						+policy
 				
-			.row
 	// end sForm
