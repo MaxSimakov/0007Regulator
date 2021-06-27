@@ -4,6 +4,7 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sDocumetation/_sDocumetation.pug
+include ../blocks/sBenefit/_sBenefit.pug
 
 block variables
 	- let  mainPage= null 
@@ -20,6 +21,7 @@ block pagecontent
 		+topLine()
 		+top-nav()
 	+headerBlock()
+	+sBenefit
 	+sDocumetation()
 	+sForm()
 	//- +sContact()
