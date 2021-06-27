@@ -126,6 +126,11 @@ body {
 .section-title {
 	padding-bottom: var(--sTPB);
 }
+h2{
+	span{
+		color: $primary;
+	}
+}
 
 
 
@@ -261,7 +266,7 @@ ul {
 
 	&__content {
 		opacity: 0;
-		@include mt;
+		// @include mt;
 		&.active {
 			display: block;
 			opacity: 1;
@@ -495,9 +500,24 @@ iframe {
 }
 
 .btn-primary {
-	color: $white;
+	color: $white !important;
+	box-shadow: 0px 5px 15px rgba(0, 136, 204, 0.25);
+
 }
 
 .btn-sm {
 	border-radius: 0;
+}
+
+.btn{
+	font-weight: bold;
+	// box-shadow: none !important;
+}
+
+.btn-check:focus+.btn,
+.btn:focus,
+.btn:active,
+.btn:active:focus
+{
+	box-shadow: none;
 }
