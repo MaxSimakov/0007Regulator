@@ -21,7 +21,11 @@
 			@extend .btn;
 			@extend .btn-outline-warning;
 			width: rem(260);
-			margin-top: rem(65);
+			@include media-breakpoint-up(lg) {
+
+				margin-top: rem(65);
+			}
+			margin-top: rem(40);
 		}
 
 	@include media-breakpoint-up(xl) {}

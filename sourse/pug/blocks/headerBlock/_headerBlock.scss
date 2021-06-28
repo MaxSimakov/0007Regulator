@@ -62,7 +62,7 @@
 			margin-bottom: rem(30);
 		}
 		.row {
-			--bs-gutter-x: 24px;
+			--bs-gutter-x: #{rem(24)};
 		}
 	}
 
