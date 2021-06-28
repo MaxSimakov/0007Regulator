@@ -13,7 +13,6 @@
 	}
 	@include media-breakpoint-up(xl) {
 		--sPB: #{rem(50)};
-
 	}
 
 	counter-reset: num;
@@ -27,6 +26,7 @@
 		}
 	}
 	&__item {
+		@include mt;
 		display: flex;
 		flex-direction: column;
 		position: relative;
@@ -91,28 +91,8 @@
 		}
 	}
 	&__col {
-		// height: calc(100% - var(--bs-gutter-x));
 		padding-bottom: var(--bs-gutter-x);
 		@include media-breakpoint-up(xl) {
-			// &:nth-child(3) {
-			// 	width: 50%;
-			// 	.sBenefit__item {
-			// 		h6 {
-			// 			max-width: rem(305);
-			// 		}
-			// 	}
-			// }
-			// &:nth-child(4) {
-			// 	width: 50%;
-			// 	.sBenefit__item {
-			// 		h6 {
-			// 			max-width: rem(305);
-			// 		}
-			// 		p {
-			// 			max-width: 482px;
-			// 		}
-			// 	}
-			// }
 		}
 	}
 
