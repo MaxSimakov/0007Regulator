@@ -227,8 +227,8 @@ function eventHandler() {
 		spaceBetween: 0,
 		loop: true,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.headerBlock .swiper-button-next',
+			prevEl: '.headerBlock .swiper-button-prev',
 		},
 		pagination: {
 			el: ' .swiper-pagination',
