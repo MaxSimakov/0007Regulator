@@ -1,14 +1,113 @@
 // start .sQwiz
 .sQwiz {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	--sPT: #{rem(30)};
+	--sPB: #{rem(110)};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(120)};
+	}
+	// --sTPB: ;
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
+	h4 {
+		color: $primary;
+		margin-bottom: rem(30);
+		font-weight: bold;
+		line-height: 150%;
+	}
+
+		
+	.form-wrap {
+		&__input-wrap {
+			padding-bottom: rem(30);
+		}
+		
+		&__radioWrap {
+			display: inline-flex;
+			align-items: center;
+			padding-top: rem(16);
+		}
+		&__block {
+			padding-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				padding-bottom: rem(30);
+			}
+		}
+
+		&__btn {
+			width: auto;
+			min-width: 358px;
+			margin-top: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-top: rem(30);
+			}
+		}
+	}
+
+
+
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sQwiz
+
+.form-wrap {
+	&__input-title {
+		line-height: 150%;
+		font-weight: bold;
+		margin-bottom: rem(14);
+		display: block;
+	}
+}
+
+.custom-radio {
+	cursor: pointer;
+	margin-bottom: rem(15);
+	@include media-breakpoint-up(sm) {
+		margin-bottom: rem(24);
+	}
+	margin-right: rem(30);
+	display: flex !important;
+	align-items: center;
+	&__text{
+		white-space: nowrap
+	}
+	&__radioInput{
+		@extend .invisible;
+	}
+
+	&__dot {
+		width: 24px;
+		height: 24px;
+		display: block;
+		border: 1px solid #EAEAEA;
+		border-radius: 50%;
+		position: relative;
+		margin-right: rem(10);
+		flex-shrink: 0;
+		@include mt;
+
+		&::before {
+			content: '';
+			@include a-cent;
+			width: 12px;
+			height: 12px;
+			background: $primary;
+			border-radius: 50%;
+			transform: scale(0);
+			@include mt;
+		}
+	}
+ 
+	&__radioInput:checked ~ &__dot {
+		border-color: $primary;
+
+		&::before {
+			transform: scale(1);
+		}
+	}
+
+	&__input-wrap {
+		width: 100%;
+		padding-left: rem(20);
+	}
+}

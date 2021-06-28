@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
+		<title>Опросный лист</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
@@ -134,7 +134,298 @@
 			<div class="sQwiz section" id="sQwiz">
 				<div class="container">
 					<div class="form-wrap">
-						<form></form>
+						<form>
+							<div class="form-wrap__block">
+								<h4>Контакты</h4>
+								<div class="row"> 
+									<div class="col-lg-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Наименование организации</span><input class="form-wrap__input form-control" name="nameCompany" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">ФИО контактного лица</span><input class="form-wrap__input form-control" name="FIO" type="text" placeholder="Заполните поле" required="required"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Электронная почта</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Заполните поле" required="required"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Контактный телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Заполните поле" required="required"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__block">
+								<h4>Контакты</h4>
+								<div class="row">
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Используемый газ</span><input class="form-wrap__input form-control" name="gasUsed" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Количество рамп</span><input class="form-wrap__input form-control" name="numberRamps" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Необходимый срок поставки</span><input class="form-wrap__input form-control" name="requiredDeliveryTime" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Колличество баллонов</span><input class="form-wrap__input form-control" name="numberCylinders" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Объем баллонов</span><input class="form-wrap__input form-control" name="cylinderVolume" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-title">Колличество плечей
+										</div>
+										<div class="form-wrap__radioWrap">
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="radio" name="numberShoulders" checked="checked"/><span class="custom-radio__dot"></span><span class="custom-radio__text">1</span>
+											</label>
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="radio" name="numberShoulders"/><span class="custom-radio__dot"></span><span class="custom-radio__text">2</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__block">
+								<h4>Исполнение</h4>
+								<div class="form-wrap__input-title">Выберите вариант установки оборудования
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__radioWrap">
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption" checked="checked"/><span class="custom-radio__dot"></span><span class="custom-radio__text">В шкафу</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption"/><span class="custom-radio__dot"></span><span class="custom-radio__text">На стене</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption"/><span class="custom-radio__dot"></span><span class="custom-radio__text">На панели</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption"/><span class="custom-radio__dot"></span><span class="custom-radio__text">В закрытом щите</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption"/><span class="custom-radio__dot"></span><span class="custom-radio__text">В кассете</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption"/><span class="custom-radio__dot"></span><span class="custom-radio__text">На стойке</span>
+										</label>
+									</div>
+								</div>
+								<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Другое</span><span class="custom-radio__input-wrap form-group"><input class="custom-radio__input form-control" name="other" type="text" placeholder="Заполните поле"/></span>
+									<!-- +e.input-wrap-->
+								</label>
+							</div>
+							<div class="form-wrap__block">
+								<h4>Технические характеристики</h4>
+								<div class="row"> 
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Входное давление</span>
+												<select class="form-wrap__input form-control" name="Inlet-pressure">
+													<option>МПа</option>
+													<option>Бар</option>
+													<option>Атм</option>
+													<option>Кгс/см2</option>
+												</select>
+											</label>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Рабочее давлениее</span>
+												<select class="form-wrap__input form-control" name="Operating-pressure">
+													<option>МПа</option>
+													<option>Бар</option>
+													<option>Атм</option>
+													<option>Кгс/см2</option>
+												</select>
+											</label>
+										</div>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Минимальное давление</span><input class="form-wrap__input form-control" name="minimumPressureInletPressure" type="text" placeholder="2.5 Pa"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Максимальное давление</span><input class="form-wrap__input form-control" name="maximumPressureInletPressure" type="text" placeholder="2.5 Pa"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Минимальное давление</span><input class="form-wrap__input form-control" name="minimumPressureOperatingPressure" type="text" placeholder="2.5 Pa"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Максимальное давление</span><input class="form-wrap__input form-control" name="maximumPressureOperatingPressure" type="text" placeholder="2.5 Pa"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Расход газа</span>
+												<select class="form-wrap__input form-control" name="Gas-consumption">
+													<option>м3/час</option>
+													<option>л/мин</option>
+												</select>
+											</label>
+										</div>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Расход газа</span><input class="form-wrap__input form-control" name="gasConsumption" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Чистота газа</span><input class="form-wrap__input form-control" name="gasPurity" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-title">Присоединение
+										</div>
+										<div class="form-wrap__radioWrap">
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="radio" name="accession" checked="checked"/><span class="custom-radio__dot"></span><span class="custom-radio__text">На входе</span>
+											</label>
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="radio" name="accession"/><span class="custom-radio__dot"></span><span class="custom-radio__text">На выходе</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-12"> 
+										<div class="form-wrap__input-title">Тип переключения
+										</div>
+										<div class="form-wrap__radioWrap">
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="radio" name="switchType" checked="checked"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Ручной</span>
+											</label>
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="radio" name="switchType"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Автоматический</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Растояние от рампы до потребителя газа</span><input class="form-wrap__input form-control" name="distance-from-the-ramp-to-the-gas-consumer" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Температура эксплуатации</span><input class="form-wrap__input form-control" name="operating-temperature" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Область применения</span><input class="form-wrap__input form-control" name="application-area" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Расположение рампы</span>
+												<select class="form-wrap__input form-control" name="Ramp-location">
+													<option>В помещении</option>
+													<option>На улице</option>
+													<option>В шкафу на улице</option>
+													<option>В шкафу на улице под навесом</option>
+													<option>В шкафу в помещении</option>
+												</select>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__block">
+								<h4>Опции</h4>
+								<div class="form-wrap__input-title">Выберите необходимые опции
+								</div>
+								<div class="row"> 
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="option" checked="checked"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Продувка азотом</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="option"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Утепленный шкаф</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="option"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Дистанционный контроль давления</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="option"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Усиленный шкаф</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="option"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Свето-звуковое оповещение</span>
+										</label>
+									</div>
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Дополнительная информация</span><input class="form-wrap__input form-control" name="AdditionalInformation" type="text" placeholder="Заполните поле"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="text-center">
+									<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+									</button>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
