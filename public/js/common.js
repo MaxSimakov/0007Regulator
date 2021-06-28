@@ -69,7 +69,7 @@ const JSCCommon = {
 						}
 					}
 
-					setValue(data.title, '.ttu');
+					setValue(data.title, '.form-wrap__title');
 					setValue(data.text, '.after-headline');
 					setValue(data.btn, '.btn');
 					setValue(data.order, '.order');
@@ -200,27 +200,6 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
 	}
 
-	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
-		if (!topNav) return;
-		window.scrollY > 0 ? topNav.classList.add('fixed') : topNav.classList.remove('fixed');
-	}
-
-	function whenResize() {
-		setFixedNav();
-	}
-
-	window.addEventListener('scroll', () => {
-		setFixedNav();
-	}, {
-		passive: true
-	});
-	window.addEventListener('resize', () => {
-		whenResize();
-	}, {
-		passive: true
-	});
-	whenResize();
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {
@@ -299,6 +278,9 @@ function eventHandler() {
 			nextEl: '.sDocumetation .swiper-button-next',
 			prevEl: '.sDocumetation .swiper-button-prev'
 		}
+	});
+	var Sticky = new hcSticky('.header', {
+		stickTo: 'body'
 	});
 }
 

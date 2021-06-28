@@ -71,10 +71,10 @@
 								</div>
 							</div>
 							<div class="col col-md-auto">
-								<div class="topLine__contacts"><a class="topLine__tel" href="tel:8 800 400 55 44">8 (800) 400 55 44</a><a class="topLine__mail d-none d-lg-block" href="mailto:info@regulator-gce.ru">info@regulator-gce.ru</a><a class="topLine__order d-lg-none" href="#">Заказать звонок</a>
+								<div class="topLine__contacts"><a class="topLine__tel" href="tel:8 800 400 55 44">8 (800) 400 55 44</a><a class="topLine__mail d-none d-lg-block" href="mailto:info@regulator-gce.ru">info@regulator-gce.ru</a><a class="topLine__order d-lg-none link-modal-js" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок">Заказать звонок</a>
 								</div>
 							</div>
-							<div class="col-auto d-none d-lg-block"><a class="btn-sm btn btn-outline-warning" href="#">Заказать звонок</a>
+							<div class="col-auto d-none d-lg-block"><a class="btn-sm btn btn-outline-warning link-modal-js" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок">Заказать звонок</a>
 							</div>
 							<div class="col-auto d-lg-none">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -145,7 +145,7 @@
 								<div class="footer__contacts"><a class="footer__tel" href="tel:88004005544">8 (800) 400 55 44</a><a class="footer__mail" href="mailto:info@regulator-gce.ru">info@regulator-gce.ru</a>
 								</div>
 							</div>
-							<div class="col-auto"><a class="btn-sm btn btn-outline-warning" href="#">Заказать звонок</a>
+							<div class="col-auto"><a class="btn-sm btn btn-outline-warning link-modal-js" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок">Заказать звонок</a>
 							</div>
 						</div>
 					</div>
@@ -156,7 +156,7 @@
 							<div class="col-md">
 								<p>&copy;&nbsp;<span class="year"></span> Официальный сайт компании &laquo;GCE Регулятор&raquo;.<br> Все права защищены. Не&nbsp;является публичной офертой.</p>
 							</div>
-							<div class="footer__rCol col-md-auto"><a class="footer__polite" href="#">Политика конфиденциальности</a><a class="footer__dev" href="#">Разработка сайта – <span>AD HEADS</span></a>
+							<div class="footer__rCol col-md-auto"><a class="footer__polite" href="#">Политика конфиденциальности</a><a class="footer__dev" href="#" target="_blank">Разработка сайта – <span>AD HEADS</span></a>
 							</div>
 						</div>
 					</div>
@@ -164,11 +164,17 @@
 			</footer>
 		</div>
 		<!--  start modals-->
-		<div class="modal-win" id="modal-call" style="display: none">
+		<div class="modal-win text-center" id="modal-call" style="display: none">
 			<div class="form-wrap">
-				<form>
+				<form> 
+					<input name="example-input-field" type="hidden"/>
+					<input class="order" name="order" type="hidden" value="Заявка  с сайта"/>
+					<input class="utm_source" name="utm_source" type="hidden"/>
+					<input class="utm_term" name="utm_term" type="hidden"/>
+					<input class="utm_medium" name="utm_medium" type="hidden"/>
+					<input class="utm_campaign" name="utm_campaign" type="hidden"/>
 					<div class="text-center">
-						<div class="form-wrap__title form-data h3 ttu">Заказать звонок
+						<div class="form-wrap__title form-data h3"> 
 						</div>
 						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 					</div>
@@ -178,7 +184,7 @@
 					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон" required="required"/> 
 					</div>
 					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
+					<button class="form-wrap__btn btn" type="submit">Отправить заявку
 					</button>
 					<div class="form-wrap__policy">
 						<div class="form-wrap__text text-secondary">Я&nbsp;согласен(а) на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями.
@@ -188,9 +194,22 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div class="modal-win text-center" id="modal-thanks" style="display: none">
+			<div class="form-wrap">
+				<div class="text-center">
+					<div class="form-wrap__title form-data h3">Спасибо за обращение!
+					</div>
+					<p class="after-headline">Мы свяжемся с Вами в ближайшее время для уточнения деталей </p>
+				</div>
+				<button class="form-wrap__btn btn mb-0 modal-close-js" type="button">Закрыть
+				</button>
+			</div>
+		</div>
+		<!-- #modal-call-->
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"></script>
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->

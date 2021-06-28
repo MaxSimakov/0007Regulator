@@ -66,7 +66,7 @@ const JSCCommon = {
 							// console.log(modal.querySelector(elem).tagName)
 						}
 					}
-					setValue(data.title, '.ttu');
+					setValue(data.title, '.form-wrap__title');
 					setValue(data.text, '.after-headline');
 					setValue(data.btn, '.btn');
 					setValue(data.order, '.order');
@@ -186,29 +186,8 @@ function eventHandler() {
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
+ 
 
-
-	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
-		if (!topNav) return;
-		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
-	}
-
-	function whenResize() {
-		setFixedNav();
-	}
-
-	window.addEventListener('scroll', () => {
-		setFixedNav();
-
-	}, { passive: true })
-	window.addEventListener('resize', () => {
-		whenResize();
-	}, { passive: true });
-
-	whenResize();
 
 
 	let defaultSl = {
@@ -297,6 +276,10 @@ function eventHandler() {
 		},
 	});
 
+
+	var Sticky = new hcSticky('.header', {
+		stickTo: 'body'
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

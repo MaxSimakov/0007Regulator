@@ -12,7 +12,7 @@ mixin card(i,p)
 			//- img.card-img-top(src=`` alt= p)
 			
 			p.card-text= p
-			a.btn.btn-primary.w-100(href='#' data-prod= p).link-modal-js Запросить цену
+			a.btn.btn-primary.w-100(href='#modal-call' data-title=`Запросить цену` data-order=`Запросить цену: ${p}`).link-modal-js Запросить цену
 mixin sCatalog(data)
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
@@ -142,6 +142,6 @@ mixin sCatalog(data)
 								+card(n+'10','Mediconnect - DUOLINE') 
 
 				
-			+e.btn-all(href="#") Запросить полный каталог
+			+e.btn-all(href='#modal-call' data-title=`Запросить полный каталог` data-order=`Запросить полный каталог`).link-modal-js Запросить полный каталог
 
 	// end sCatalog
