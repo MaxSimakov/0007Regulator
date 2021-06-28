@@ -1,8 +1,14 @@
 // start .topLine
 .topLine {
+	position: relative;
 	padding-top: rem(13.5);
 	padding-bottom: rem(13.5);
-	border-bottom: 1px solid $gray-100;
+	border-bottom: 1px solid transparent;
+	background-color: $white;
+	z-index: 1000;
+	@include media-breakpoint-up(lg) {
+		border-color: $gray-100;
+	}
 	.row {
 		@include roww(20px);
 		@include media-breakpoint-up(lg) {
@@ -34,7 +40,6 @@
 		text-align: right;
 		@include media-breakpoint-up(lg) {
 			text-align: left;
-
 		}
 		&:hover {
 			color: $primary;
@@ -50,24 +55,6 @@
 		color: $warning;
 		text-decoration: underline;
 		text-align: right;
-		
-	}
-
-	&__questionnaire {
-		display: inline-flex;
-		align-items: center;
-		justify-content: flex-end;
-		padding-top: rem(10);
-		padding-bottom: rem(10);
-		color: $body-color;
-		@include media-breakpoint-up(lg) {
-			justify-content: flex-start;
-		}
-		.icon {
-			color: $warning;
-			font-size: 24px;
-			margin-right: rem(10);
-		}
 	}
 
 	.btn-sm {
@@ -75,7 +62,7 @@
 	}
 
 	.soc {
-		.icon{
+		.icon {
 			font-size: rem(20);
 			@include media-breakpoint-up(lg) {
 				font-size: rem(24);
@@ -121,3 +108,20 @@
 	@include media-breakpoint-down(xs) {
 	}
 } // end.topLine
+
+.questionnaire {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-top: rem(10);
+	padding-bottom: rem(10);
+	color: $body-color;
+	@include media-breakpoint-up(lg) {
+		justify-content: flex-start;
+	}
+	.icon {
+		color: $warning;
+		font-size: 24px;
+		margin-right: rem(10);
+	}
+}
