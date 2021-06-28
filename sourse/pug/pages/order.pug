@@ -1,0 +1,31 @@
+
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sQwiz/_sQwiz.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= `main.jpg`
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+b.page-head 
+		.container
+			h1 Опросный лист
+	+sQwiz
+	+footer()
+
+
+
+

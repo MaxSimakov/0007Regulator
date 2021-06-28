@@ -3,13 +3,15 @@
 	--sPB: 0;
 	--sTPB: #{rem(50)};
 	--sPT: #{rem(50)};
+	picture{
+	}
 	
 	@include media-breakpoint-up(md) {
 		--sTPB: #{rem(60)};
 		--sPT: #{rem(60)};
 	}
 	position: relative;
-
+	
 	h1 {
 		color: $white;
 		@include media-breakpoint-down(lg) {
@@ -17,6 +19,7 @@
 		}
 	}
 	.picture-bg {
+		background-color: $body-color;
 		max-height: 65.1%;
 		@include media-breakpoint-up(md) {
 			max-height: 66.4%;

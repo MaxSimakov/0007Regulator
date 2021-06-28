@@ -1,0 +1,117 @@
+// start .sCatalog
+.sCatalog {
+	background: #F2F2F2;
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		&__col{
+
+			@include media-breakpoint-up(xl) {
+				&:nth-child(3),
+				&:nth-child(4){
+
+				}
+			}
+		}
+
+		&__btn-all{
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			@extend .btn;
+			@extend .btn-outline-warning;
+			width: rem(260);
+			@include media-breakpoint-up(lg) {
+
+				margin-top: rem(65);
+			}
+			margin-top: rem(40);
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {
+		.row{
+			--bs-gutter-x: 24px;
+		}
+	}
+} // end.sCatalog
+
+.tabs{
+	&__caption{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-bottom: rem(40);
+	}
+}
+
+.tabs-main__btn{
+	border: 1px solid #D9D9D9; 
+	@include media-breakpoint-up(xl) {
+		width: rem(291);
+	}
+	width: rem(270);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: rem(55);
+	padding: rem(5);
+	text-align: center;
+	@include mt;
+	&.active,
+	&:hover{
+		font-weight: bold;
+		background-color: $primary;
+		border-color: $primary;
+		box-shadow: 0px 5px 15px rgba(0, 136, 204, 0.25);
+		color: #fff;
+	}
+}
+.tabs-inner__btn {
+	background-color: #fff; 
+	color: #858F98;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: rem(40);
+	@include media-breakpoint-up(xl) {
+		padding: rem(5) rem(20);
+	}
+	padding: rem(5) rem(10);
+	border-radius: 60px;
+	text-align: center;
+	margin-bottom: rem(15);
+	@include mt;
+	&.active,
+	&:hover{ 
+		background-color: #717380;
+		color: #fff;
+	}
+}
+
+.tabs-inner__caption {
+	@include roww(15px, m);
+}
+
+.card{
+	padding: rem(30) rem(30) rem(30);
+	margin-bottom: var(--bs-gutter-x);
+	picture{
+		margin-bottom: rem(15);
+		@include block;
+		img{
+			@include a-cent1;
+		}
+	}
+	p{
+		min-height: 4em;
+	}
+	.btn{
+		margin-top: auto;
+	}
+}

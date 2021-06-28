@@ -42,14 +42,13 @@ mixin select(label,pl,...items)
 //- wrapper for form
 mixin form-wrap(inp)
 	+b.form-wrap&attributes(attributes)
-		form
-			if inp
-				input(name='example-input-field', type='hidden')
-				input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
-				input(class='utm_source' name='utm_source' type="hidden")
-				input(class='utm_term' name='utm_term' type="hidden")
-				input(class='utm_medium' name='utm_medium' type="hidden")
-				input(class='utm_campaign' name='utm_campaign' type="hidden")
+		form 
+			input(name='example-input-field', type='hidden')
+			input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+			input(class='utm_source' name='utm_source' type="hidden")
+			input(class='utm_term' name='utm_term' type="hidden")
+			input(class='utm_medium' name='utm_medium' type="hidden")
+			input(class='utm_campaign' name='utm_campaign' type="hidden")
 			block
 //- /wrapper for form
 

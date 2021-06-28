@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>title</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 570 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script>
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body data-bg="main.jpg">
+		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="menu-mobile__inner">
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Главная</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Преимущества</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Этапы работ</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Разрешительные документы</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сделать запрос</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+					</ul>
+					<div class="text-right"></div>
+				</div>
+			</div>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start topLine-->
+				<div class="topLine" id="topLine">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col col-sm-auto"><a class="topLine__logo" href="/"><img src="img/svg/logo.svg" alt=""/></a>
+							</div>
+							<div class="col d-none d-md-block"><a class="topLine__questionnaire" href="#">
+								<svg class="icon icon-question ">
+									<use xlink:href="img/svg/sprite.svg#question"></use>
+								</svg><span>Опросный лист</span></a>
+							</div>
+							<div class="col-auto d-none d-md-block">
+								<div class="soc"><a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-viber ">
+										<use xlink:href="img/svg/sprite.svg#viber"></use>
+									</svg></a><a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-whatsapp ">
+										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+									</svg></a><a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg></a>
+								</div>
+							</div>
+							<div class="col col-md-auto">
+								<div class="topLine__contacts"><a class="topLine__tel" href="tel:8 800 400 55 44">8 (800) 400 55 44</a><a class="topLine__mail d-none d-lg-block" href="mailto:info@regulator-gce.ru">info@regulator-gce.ru</a><a class="topLine__order d-lg-none link-modal-js" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок">Заказать звонок</a>
+								</div>
+							</div>
+							<div class="col-auto d-none d-lg-block"><a class="btn-sm btn btn-outline-warning link-modal-js" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок">Заказать звонок</a>
+							</div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end topLine-->
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="row">
+							<div class="col d-none d-lg-block">
+								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Главная</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Преимущества</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Этапы работ</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Разрешительные документы</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сделать запрос</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<div class="page-head"> 
+				<div class="container">
+					<h1>Опросный лист</h1>
+				</div>
+			</div>
+			<!-- start sQwiz-->
+			<div class="sQwiz section" id="sQwiz">
+				<div class="container">
+					<div class="form-wrap">
+						<form></form>
+					</div>
+				</div>
+			</div>
+			<!-- end sQwiz-->
+			<footer class="footer"> 
+				<div class="footer__topLine">
+					<div class="container">
+						<div class="footer__row row">
+							<div class="footer__col col col-lg"><a class="footer__logo" href="/"><img src="img/svg/logo-white.svg" alt="" loading="lazy"/></a><a class="footer__questionnaire" href="#">
+								<svg class="icon icon-question ">
+									<use xlink:href="img/svg/sprite.svg#question"></use>
+								</svg><span>Опросный лист</span></a>
+							</div>
+							<div class="footer__socCol col-md-auto">
+								<div class="soc"><a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-viber ">
+										<use xlink:href="img/svg/sprite.svg#viber"></use>
+									</svg></a><a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-whatsapp ">
+										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+									</svg></a><a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg></a>
+								</div>
+							</div>
+							<div class="col col-md-auto d-none d-lg-block">
+								<div class="footer__contacts"><a class="footer__tel" href="tel:88004005544">8 (800) 400 55 44</a><a class="footer__mail" href="mailto:info@regulator-gce.ru">info@regulator-gce.ru</a>
+								</div>
+							</div>
+							<div class="col-auto"><a class="btn-sm btn btn-outline-warning link-modal-js" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок">Заказать звонок</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__foot"> 
+					<div class="container"> 
+						<div class="row"> 
+							<div class="col-md">
+								<p>&copy;&nbsp;<span class="year"></span> Официальный сайт компании &laquo;GCE Регулятор&raquo;.<br> Все права защищены. Не&nbsp;является публичной офертой.</p>
+							</div>
+							<div class="footer__rCol col-md-auto"><a class="footer__polite" href="#">Политика конфиденциальности</a><a class="footer__dev" href="#" target="_blank">Разработка сайта – <span>AD HEADS</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win text-center" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form> 
+					<input name="example-input-field" type="hidden"/>
+					<input class="order" name="order" type="hidden" value="Заявка  с сайта"/>
+					<input class="utm_source" name="utm_source" type="hidden"/>
+					<input class="utm_term" name="utm_term" type="hidden"/>
+					<input class="utm_medium" name="utm_medium" type="hidden"/>
+					<input class="utm_campaign" name="utm_campaign" type="hidden"/>
+					<div class="text-center">
+						<div class="form-wrap__title form-data h3"> 
+						</div>
+						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон" required="required"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit">Отправить заявку
+					</button>
+					<div class="form-wrap__policy">
+						<div class="form-wrap__text text-secondary">Я&nbsp;согласен(а) на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями.
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div class="modal-win text-center" id="modal-thanks" style="display: none">
+			<div class="form-wrap">
+				<div class="text-center">
+					<div class="form-wrap__title form-data h3">Спасибо за обращение!
+					</div>
+					<p class="after-headline">Мы свяжемся с Вами в ближайшее время для уточнения деталей </p>
+				</div>
+				<button class="form-wrap__btn btn mb-0 modal-close-js" type="button">Закрыть
+				</button>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<!-- modal libs-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"></script>
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="js/libs.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

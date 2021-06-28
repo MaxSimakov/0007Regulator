@@ -4,8 +4,8 @@ mixin topLine()
 		.container
 			.row.align-items-center
 				.col.col-sm-auto
-					+e.logo(href="#")
-						img(src="img/@2x/logo.png", alt="")
+					+e.logo(href="/")
+						img(src="img/svg/logo.svg", alt="")
 				.col.d-none.d-md-block
 					+e.questionnaire(href="#")
 						+icon('question')
@@ -16,9 +16,9 @@ mixin topLine()
 					+e.contacts
 						+e.tel(href='tel:8 800 400 55 44') 8 (800) 400 55 44
 						+e.mail.d-none.d-lg-block(href='mailto:info@regulator-gce.ru') info@regulator-gce.ru
-						+e.order.d-lg-none(href='#') Заказать звонок
+						+e.order.d-lg-none(href='#modal-call' data-title="Заказать звонок" data-order="Заказать звонок").link-modal-js Заказать звонок
 				.col-auto.d-none.d-lg-block
-					+b.btn-sm.btn.btn-outline-warning(href='#') Заказать звонок
+					+b.btn-sm.btn.btn-outline-warning(href='#modal-call' data-title="Заказать звонок" data-order="Заказать звонок").link-modal-js Заказать звонок
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span

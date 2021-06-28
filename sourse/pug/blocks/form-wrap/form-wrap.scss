@@ -10,6 +10,8 @@
  	}
  	&__btn{
  		cursor: pointer;
+		 @extend .btn;
+		 @extend .btn-primary;
  	}
  	label{
  		width: 100%;

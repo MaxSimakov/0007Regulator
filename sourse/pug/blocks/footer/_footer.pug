@@ -4,8 +4,8 @@ mixin footer()
 			.container
 				+e.row.row
 					+e.col.col.col-lg
-						+e.logo(href="#")
-							img(src="img/svg/logo-white.svg", alt="Логотип" loading="lazy")
+						+e.logo(href="/")
+							img(src="img/svg/logo-white.svg", alt="" loading="lazy")
 						+e.questionnaire(href="#")
 							+icon('question')
 							span Опросный лист
@@ -16,7 +16,7 @@ mixin footer()
 							+e.tel(href='tel:88004005544') 8 (800) 400 55 44
 							+e.mail(href='mailto:info@regulator-gce.ru') info@regulator-gce.ru
 					.col-auto
-						+b.btn-sm.btn.btn-outline-warning(href='#') Заказать звонок
+						+b.btn-sm.btn.btn-outline-warning(href='#modal-call' data-title="Заказать звонок" data-order="Заказать звонок").link-modal-js Заказать звонок
 		+e.foot 
 			.container 
 				.row 
@@ -24,5 +24,5 @@ mixin footer()
 						p &copy;&nbsp;#[span.year ] Официальный сайт компании &laquo;GCE Регулятор&raquo;.<br> Все права защищены. Не&nbsp;является публичной офертой.
 					+e.rCol.col-md-auto
 						+e.polite(href="#") Политика конфиденциальности
-						+e.dev(href="#") Разработка сайта – 
+						+e.dev(href="#" target="_blank") Разработка сайта – 
 							span AD HEADS
