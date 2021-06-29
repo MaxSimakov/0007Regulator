@@ -99,8 +99,12 @@
 }
 
 .card{
+	@include mt;
 	padding: rem(30) rem(30) rem(30);
 	margin-bottom: var(--bs-gutter-x);
+	&:hover {
+		box-shadow: $box-shadow;
+	}
 	picture{
 		margin-bottom: rem(15);
 		@include block;
