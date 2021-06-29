@@ -103,7 +103,7 @@ const JSCCommon = {
 		document.addEventListener('mouseup', (event) => {
 			let container = event.target.closest(".menu-mobile--js.active"); // (1)
 			let link = event.target.closest(".menu a"); // (1)
-			// if (!container || link) this.closeMenu();
+			if (link) this.closeMenu();
 		}, { passive: true });
 
 		window.addEventListener('resize', () => {
@@ -156,7 +156,7 @@ const JSCCommon = {
 			}
 			else {
 				let destination = $(elementClick).offset().top;
-				$('html, body').animate({ scrollTop: destination - 80 }, 0);
+				$('html, body').animate({ scrollTop: destination - $(".header").height() }, 0);
 				return false;
 			}
 		});
@@ -165,7 +165,51 @@ const JSCCommon = {
 		let now = new Date();
 		let currentYear = document.querySelector(el);
 		if (currentYear) currentYear.innerText = now.getFullYear();
-	}
+	},
+	sendForm() {
+		var gets = (function () {
+			var a = window.location.search;
+			var b = new Object();
+			var c;
+			a = a.substring(1).split("&");
+			for (var i = 0; i < a.length; i++) {
+				c = a[i].split("=");
+				b[c[0]] = c[1];
+			}
+			return b;
+		})();
+		// form
+		$(document).on('submit', "form", function (e) {
+			e.preventDefault();
+			const th = $(this);
+			var data = th.serialize();
+			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
+			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
+			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
+			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
+			$.ajax({
+				url: 'action.php',
+				type: 'POST',
+				data: data,
+			}).done(function (data) {
+
+				$.fancybox.close();
+				$.fancybox.open({
+					src: '#modal-thanks',
+					type: 'inline'
+				});
+				// window.location.replace("/thanks.html");
+				setTimeout(function () {
+					// Done Functions
+					th.trigger("reset");
+					// $.magnificPopup.close();
+					// ym(53383120, 'reachGoal', 'zakaz');
+					// yaCounter55828534.reachGoal('zakaz');
+				}, 4000);
+			}).fail(function () { });
+
+		});
+	},
 };
 const $ = jQuery;
 
@@ -177,6 +221,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); 
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
+	JSCCommon.sendForm();
 	JSCCommon.getCurrentYear('.year');
 
 	// JSCCommon.CustomInputFile(); 
@@ -227,8 +272,8 @@ function eventHandler() {
 		spaceBetween: 0,
 		loop: true,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.headerBlock .swiper-button-next',
+			prevEl: '.headerBlock .swiper-button-prev',
 		},
 		pagination: {
 			el: ' .swiper-pagination',
@@ -277,9 +322,9 @@ function eventHandler() {
 	});
 
 
-	var Sticky = new hcSticky('.header', {
-		stickTo: 'body'
-	});
+	// var Sticky = new hcSticky('.header', {
+	// 	stickTo: 'body'
+	// });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

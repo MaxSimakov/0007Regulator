@@ -8,6 +8,8 @@
 	margin-bottom: 0;
 	max-width: 100%;
 	flex-wrap: wrap;
+	padding-top: 1px;
+	margin-bottom: -1px;
 	@include media-breakpoint-up(lg) {
 		flex-direction: row;
 		justify-content: space-between;

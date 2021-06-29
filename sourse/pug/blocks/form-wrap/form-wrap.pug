@@ -32,8 +32,8 @@ mixin input(placeholder,  t='text', label, name= t)
 mixin select(label,pl,...items)
 	+e.input-wrap.form-group
 		label
-			+e.SPAN.title= label
-			+e.SELECT.input.form-control&attributes(attributes)
+			+e.SPAN.input-title= label
+			+e.SELECT.input.form-select&attributes(attributes)
 
 					option()= pl
 					each item in items

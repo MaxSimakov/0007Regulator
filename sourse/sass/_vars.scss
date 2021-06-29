@@ -471,7 +471,7 @@ $line-height-lg: 1.75 !default;
 $h1-font-size: $font-size-base * 3;
 $h2-font-size: $font-size-base * 2.625;
 $h3-font-size: $font-size-base * 2.25;
-$h4-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: rem(30) !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base * 1.125;
 // scss-docs-end font-variables
@@ -775,7 +775,7 @@ $form-check-input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $form-check-input-checked-color: $component-active-color !default;
 $form-check-input-checked-bg-color: $component-active-bg !default;
 $form-check-input-checked-border-color: $form-check-input-checked-bg-color !default;
-$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$primary}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
 $form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
 $form-check-input-indeterminate-color: $component-active-color !default;
