@@ -11,6 +11,7 @@ mixin sQwiz(data)
 		.container
 			+b.form-wrap
 				form
+					input(type="hidden" name="qwiz" value="qwiz")
 					+e.block
 						h4 Контакты
 						.row 
@@ -46,46 +47,48 @@ mixin sQwiz(data)
 						.row
 							.col-md-6.col-lg-4 
 								+e.radioWrap
-									+radio('В шкафу','installationOption','checkbox')(checked)
+									+radio('В шкафу','installationOption[]','checkbox')(checked)
 							.col-md-6.col-lg-4 
-									+radio('На стене','installationOption','checkbox')
+									+radio('На стене','installationOption[]','checkbox')
 								
 							.col-md-6.col-lg-4 
-									+radio('На панели','installationOption','checkbox')
+									+radio('На панели','installationOption[]','checkbox')
 								
 							.col-md-6.col-lg-4 
-									+radio('В закрытом щите','installationOption','checkbox')
+									+radio('В закрытом щите','installationOption[]','checkbox')
 								
 							.col-md-6.col-lg-4 
-									+radio('В кассете','installationOption','checkbox')
+									+radio('В кассете','installationOption[]','checkbox')
 								
 							.col-md-6.col-lg-4 
-									+radio('На стойке','installationOption','checkbox')
+									+radio('На стойке','installationOption[]','checkbox')
 									
-						+radio('Другое','installationOption','checkbox')
+						+radio('Другое','installationOption[]','checkbox')
 							+input('Заполните поле','text','','other')
 					+e.block
 						h4 Технические характеристики
 						.row 
 							.col-lg-6
 								+select('Входное давление','МПа','Бар','Атм','Кгс/см2')(name="Inlet-pressure")
+								.row
+									.col-sm-6 
+										+input('2.5 Pa','text','Минимальное давление','minimumPressureInletPressure')
+									.col-sm-6 
+										+input('2.5 Pa','text','Максимальное давление','maximumPressureInletPressure')
 							.col-lg-6
-								+select('Рабочее давлениее','МПа','Бар','Атм','Кгс/см2')(name="Operating-pressure")
-							.col-md-6.col-lg-4 
-								+input('2.5 Pa','text','Минимальное давление','minimumPressureInletPressure')
-							.col-md-6.col-lg-4 
-								+input('2.5 Pa','text','Максимальное давление','maximumPressureInletPressure')
-							.col-md-6.col-lg-4 
-								+input('2.5 Pa','text','Минимальное давление','minimumPressureOperatingPressure')
-							.col-md-6.col-lg-4 
-								+input('2.5 Pa','text','Максимальное давление','maximumPressureOperatingPressure')
-							.col-md-6.col-lg-4 
+								+select('Рабочее давление','МПа','Бар','Атм','Кгс/см2')(name="Operating-pressure")
+								.row
+									.col-sm-6 
+										+input('2.5 Pa','text','Минимальное давление','minimumPressureOperatingPressure')
+									.col-sm-6 
+										+input('2.5 Pa','text','Максимальное давление','maximumPressureOperatingPressure')
+							.col-md-6.col-lg-3
 								+select('Расход газа','м3/час','л/мин')(name="Gas-consumption")
-							.col-md-6.col-lg-4 
+							.col-md-6.col-lg-3
 								+input('Заполните поле','text','Расход газа','gasConsumption')
-							.col-md-6.col-lg-4 
+							.col-md-6.col-lg-3
 								+input('Заполните поле','text','Чистота газа','gasPurity')
-							.col-md-6.col-lg-4 
+							.col-md-6.col-lg-3
 								+e.input-title Присоединение
 								+e.radioWrap
 									+radio('На входе','accession')(checked)
@@ -108,15 +111,15 @@ mixin sQwiz(data)
 						+e.input-title Выберите необходимые опции
 						.row 
 							.col-md-6.col-lg-4 
-								+radio('Продувка азотом','option','checkbox')(checked)
+								+radio('Продувка азотом','option[]','checkbox')(checked)
 							.col-md-6.col-lg-4 
-								+radio('Утепленный шкаф','option','checkbox')
+								+radio('Утепленный шкаф','option[]','checkbox')
 							.col-md-6.col-lg-4 
-								+radio('Дистанционный контроль давления','option','checkbox')
+								+radio('Дистанционный контроль давления','option[]','checkbox')
 							.col-md-6.col-lg-4 
-								+radio('Усиленный шкаф','option','checkbox')
+								+radio('Усиленный шкаф','option[]','checkbox')
 							.col-md-6.col-lg-4 
-								+radio('Свето-звуковое оповещение','option','checkbox')
+								+radio('Свето-звуковое оповещение','option[]','checkbox')
 						+input('Заполните поле','text','Дополнительная информация','AdditionalInformation')
 						.text-center
 							+e.btn.btn.btn-primary(type="submit") Отправить

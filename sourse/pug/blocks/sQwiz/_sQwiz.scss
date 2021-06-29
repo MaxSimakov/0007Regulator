@@ -24,6 +24,7 @@
 			display: inline-flex;
 			align-items: center;
 			padding-top: rem(16);
+			margin-bottom: 1rem;
 		}
 		&__block {
 			padding-bottom: rem(20);
@@ -80,7 +81,7 @@
 		height: 24px;
 		display: block;
 		border: 1px solid #EAEAEA;
-		border-radius: 50%;
+		
 		position: relative;
 		margin-right: rem(10);
 		flex-shrink: 0;
@@ -89,12 +90,25 @@
 		&::before {
 			content: '';
 			@include a-cent;
-			width: 12px;
-			height: 12px;
-			background: $primary;
-			border-radius: 50%;
 			transform: scale(0);
 			@include mt;
+		}
+	}
+	[type="radio"]~&__dot{
+		border-radius: 50%;
+		&::before {
+			
+			width: 12px;
+			height: 12px;
+			background: $primary; 
+			border-radius: 50%; 
+		}
+	}
+	[type="checkbox"] ~ &__dot {
+		&::before{
+			width: 22px;
+			height: 22px;
+			background: $form-check-input-checked-bg-image;
 		}
 	}
  
