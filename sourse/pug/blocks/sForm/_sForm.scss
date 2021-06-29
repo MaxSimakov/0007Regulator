@@ -38,6 +38,7 @@
 		color: #fff;
 		@include media-breakpoint-down(lg) {
 			padding-bottom: rem(50);
+			text-align: center;
 		}
 	}
 
