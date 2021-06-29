@@ -13,6 +13,9 @@
 	// 0,
 	// 0;
 	// background-color: #{rgba(var(--color-link), .5)};
+	@include media-breakpoint-up(lg) {
+		border-bottom: solid 1px #EAEAEA;
+	}
 	&.fixed { 
 		bottom: auto;
 		margin-top: 0;

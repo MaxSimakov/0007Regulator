@@ -1,0 +1,21 @@
+mixin sStages(data)
+	// start sStages
+	+b.SECTION.sStages.section#sStages&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Этапы #[span работ]
+			.row
+				mixin item(i, p, btn)
+					+e.col.col-lg-6.col-xl-4
+						+e.item
+							img.res-i(src=`img/svg/stages-${i}.svg`, alt='')
+							p!= p
+							if btn
+								+b.btn-sm.btn.btn-outline-warning(href='order.html' )
+									+icon('question') 
+									span Открыть опросный лист
+
+				+item(1 , `Предоставьте все необходимые данные о своем проекте, заполнив опросный лист.`, `btn`)
+				+item(2 , `Наш специалист разработает чертеж и коммерческое предложение и отправит вам.`)
+				+item(3 , `Ознакомьтесь с документами. Позднее мы свяжемся с&nbsp;вами и выясним, нужны ли доработки`)
+	// end sStages

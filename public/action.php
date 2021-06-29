@@ -25,22 +25,25 @@ $time = date('d.m.Y в H:i');
 $html = '
 
 <table style="width: 100%;">';
-    if (!empty($_POST['order'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Вид формы:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['order'] . '</b></td></tr>';
-    }
+if (!empty($_POST['order'])) {
+    $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Вид формы:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['order'] . '</b></td></tr>';
+}
 
+    if (!empty($_POST['nameCompany'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Наименование организации:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['nameCompany'] . '</b></td>';
+    }
     if (!empty($_POST['name'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">Name:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['name'] . '</b></td></tr>';
+    }
+    
+    if (!empty($_POST['email'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Email:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td></tr>';
     }
     
     if (!empty($_POST['tel'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
     }
     
-    if (!empty($_POST['email'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Email:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td></tr>';
-    }
-
     if (!empty($_POST['text'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вопрос:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['text'] . '</b></td>';
     }
@@ -48,6 +51,105 @@ $html = '
     if (!empty($_POST['comment'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Отзыв:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['comment'] . '</b></td>';
     }
+
+
+    if (!empty($_POST['FIO'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> ФИО контактного лица:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['commFIOent'] . '</b></td>';
+    }
+
+    if (!empty($_POST['gasUsed'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Используемый газ:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['gasUsed'] . '</b></td>';
+    }
+
+    if (!empty($_POST['numberRamps'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Количество рамп:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['numberRamps'] . '</b></td>';
+    }
+
+    if (!empty($_POST['requiredDeliveryTime'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Необходимый срок поставки:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['requiredDeliveryTime'] . '</b></td>';
+    }
+
+    if (!empty($_POST['numberCylinders'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Колличество баллонов:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['numberCylinders'] . '</b></td>';
+    }
+
+    if (!empty($_POST['cylinderVolume'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Объем баллонов:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['cylinderVolume'] . '</b></td>';
+    }
+    
+    if (!empty($_POST['numberShoulders'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Колличество плечей:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['numberShoulders'] . '</b></td>';
+    }
+
+    if (!empty($_POST['installationOption'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> вариант установки оборудования:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['installationOption'] . '</b></td>';
+    }
+
+    if (!empty($_POST['minimumPressureInletPressure'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Минимальное входное давление:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['minimumPressureInletPressure'] . '</b></td>';
+    }
+
+    if (!empty($_POST['maximumPressureInletPressure'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Максимальное входное давление:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['maximumPressureInletPressure'] . '</b></td>';
+    }
+
+    if (!empty($_POST['minimumPressureOperatingPressure'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Минимальное  рабочее давление:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['minimumPressureOperatingPressure'] . '</b></td>';
+    }
+    
+    if (!empty($_POST['maximumPressureOperatingPressure'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Максимальное  рабочее давление:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['maximumPressureOperatingPressure'] . '</b></td>';
+    }
+
+    if (!empty($_POST['gasConsumption'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Расход газа:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['gasConsumption'] . '</b></td>';
+    }
+
+    if (!empty($_POST['gasPurity'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Чистота газа:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['gasPurity'] . '</b></td>';
+    }
+
+    if (!empty($_POST['accession'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Присоединение:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['accession'] . '</b></td>';
+    }
+
+    if (!empty($_POST['switchType'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Тип переключения:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['switchType'] . '</b></td>';
+    }
+
+    if (!empty($_POST['distance-from-the-ramp-to-the-gas-consumer'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Растояние от рампы до потребителя газа:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['distance-from-the-ramp-to-the-gas-consumer'] . '</b></td>';
+    }
+
+    if (!empty($_POST['operating-temperature'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Температура эксплуатации:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['operating-temperature'] . '</b></td>';
+    }
+
+    if (!empty($_POST['option'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Необходимые опции:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['option'] . '</b></td>';
+    }
+
+    if (!empty($_POST['AdditionalInformation'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Дополнительная информация:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['AdditionalInformation'] . '</b></td>';
+    }
+
+
+    if (!empty($_POST['Inlet-pressure'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Входное давление:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['Inlet-pressure'] . '</b></td>';
+    }
+
+    if (!empty($_POST['Operating-pressure'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px  Рабочее давление:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['Operating-pressure'] . '</b></td>';
+    }
+
+    if (!empty($_POST['Gas-consumption'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Расход газа:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['Gas-consumption'] . '</b></td>';
+    }
+
+    if (!empty($_POST['Ramp-location'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Расположение рампы:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['Ramp-location'] . '</b></td>';
+    }
+
 
     // if (!empty($_POST['tech'])) {
     //     $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Техника:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['tech']) . '</b></td></tr>';

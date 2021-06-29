@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
+		<title>Опросный лист</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
@@ -31,16 +31,36 @@
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="menu-mobile__inner">
-					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Главная</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Преимущества</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Этапы работ</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Разрешительные документы</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сделать запрос</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-					</ul>
-					<div class="text-right"></div>
+					<div class="container">
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item menu-item-has-children"><a href="/" itemprop="url">Главная</a></li>
+							<li class="menu-item" itemprop="item"><a href="#sBenefit" itemprop="url">Преимущества</a></li>
+							<li class="menu-item" itemprop="item"><a href="#sCatalog" itemprop="url">Каталог</a></li>
+							<li class="menu-item" itemprop="item"><a href="#sStages" itemprop="url">Этапы работ</a></li>
+							<li class="menu-item" itemprop="item"><a href="#sDocumetation" itemprop="url">Разрешительные документы</a></li>
+							<li class="menu-item" itemprop="item"><a href="#sForm" itemprop="url">Сделать запрос</a></li>
+							<li class="menu-item" itemprop="item"><a href="#sContact" itemprop="url">Контакты</a></li>
+							<li class="menu-item" itemprop="item"><a class="questionnaire" href="#">
+								<svg class="icon icon-question ">
+									<use xlink:href="img/svg/sprite.svg#question"></use>
+								</svg><span>Опросный лист</span></a>
+							</li>
+							<li class="menu-item" itemprop="item">
+								<div class="soc"><a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-viber ">
+										<use xlink:href="img/svg/sprite.svg#viber"></use>
+									</svg></a><a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-whatsapp ">
+										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+									</svg></a><a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg></a>
+								</div>
+							</li>
+						</ul>
+						<div class="text-right"></div>
+					</div>
 				</div>
 			</div>
 			<!--  мобильное меню-->
@@ -52,7 +72,7 @@
 						<div class="row align-items-center">
 							<div class="col col-sm-auto"><a class="topLine__logo" href="/"><img src="img/svg/logo.svg" alt=""/></a>
 							</div>
-							<div class="col d-none d-md-block"><a class="topLine__questionnaire" href="#">
+							<div class="col d-none d-md-block"><a class="questionnaire" href="order.html">
 								<svg class="icon icon-question ">
 									<use xlink:href="img/svg/sprite.svg#question"></use>
 								</svg><span>Опросный лист</span></a>
@@ -71,7 +91,7 @@
 								</div>
 							</div>
 							<div class="col col-md-auto">
-								<div class="topLine__contacts"><a class="topLine__tel" href="tel:8 800 400 55 44">8 (800) 400 55 44</a><a class="topLine__mail d-none d-lg-block" href="mailto:info@regulator-gce.ru">info@regulator-gce.ru</a><a class="topLine__order d-lg-none link-modal-js" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок">Заказать звонок</a>
+								<div class="topLine__contacts"><a class="topLine__tel" href="tel:88004005544">8 (800) 400 55 44</a><a class="topLine__mail d-none d-lg-block" href="mailto:info@regulator-gce.ru">info@regulator-gce.ru</a><a class="topLine__order d-lg-none link-modal-js" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок">Заказать звонок</a>
 								</div>
 							</div>
 							<div class="col-auto d-none d-lg-block"><a class="btn-sm btn btn-outline-warning link-modal-js" href="#modal-call" data-title="Заказать звонок" data-order="Заказать звонок">Заказать звонок</a>
@@ -90,13 +110,13 @@
 						<div class="row">
 							<div class="col d-none d-lg-block">
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Главная</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Преимущества</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Этапы работ</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Разрешительные документы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сделать запрос</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+									<li class="menu-item menu-item-has-children"><a href="/" itemprop="url">Главная</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sBenefit" itemprop="url">Преимущества</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sCatalog" itemprop="url">Каталог</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sStages" itemprop="url">Этапы работ</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sDocumetation" itemprop="url">Разрешительные документы</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sForm" itemprop="url">Сделать запрос</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sContact" itemprop="url">Контакты</a></li>
 								</ul>
 							</div>
 						</div>
@@ -114,7 +134,298 @@
 			<div class="sQwiz section" id="sQwiz">
 				<div class="container">
 					<div class="form-wrap">
-						<form></form>
+						<form>
+							<div class="form-wrap__block">
+								<h4>Контакты</h4>
+								<div class="row"> 
+									<div class="col-lg-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Наименование организации</span><input class="form-wrap__input form-control" name="nameCompany" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">ФИО контактного лица</span><input class="form-wrap__input form-control" name="name" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Электронная почта</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Контактный телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Заполните поле" required="required"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__block">
+								<h4>Техническая информация</h4>
+								<div class="row">
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Используемый газ</span><input class="form-wrap__input form-control" name="gasUsed" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Количество рамп</span><input class="form-wrap__input form-control" name="numberRamps" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Необходимый срок поставки</span><input class="form-wrap__input form-control" name="requiredDeliveryTime" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Колличество баллонов</span><input class="form-wrap__input form-control" name="numberCylinders" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Объем баллонов</span><input class="form-wrap__input form-control" name="cylinderVolume" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-title">Колличество плечей
+										</div>
+										<div class="form-wrap__radioWrap">
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="radio" name="numberShoulders" value="1" checked="checked"/><span class="custom-radio__dot"></span><span class="custom-radio__text">1</span>
+											</label>
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="radio" name="numberShoulders" value="2"/><span class="custom-radio__dot"></span><span class="custom-radio__text">2</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__block">
+								<h4>Исполнение</h4>
+								<div class="form-wrap__input-title">Выберите вариант установки оборудования
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__radioWrap">
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption" value="В шкафу" checked="checked"/><span class="custom-radio__dot"></span><span class="custom-radio__text">В шкафу</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption" value="На стене"/><span class="custom-radio__dot"></span><span class="custom-radio__text">На стене</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption" value="На панели"/><span class="custom-radio__dot"></span><span class="custom-radio__text">На панели</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption" value="В закрытом щите"/><span class="custom-radio__dot"></span><span class="custom-radio__text">В закрытом щите</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption" value="В кассете"/><span class="custom-radio__dot"></span><span class="custom-radio__text">В кассете</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption" value="На стойке"/><span class="custom-radio__dot"></span><span class="custom-radio__text">На стойке</span>
+										</label>
+									</div>
+								</div>
+								<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="installationOption" value="Другое"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Другое</span><span class="custom-radio__input-wrap form-group"><input class="custom-radio__input form-control" name="other" type="text" placeholder="Заполните поле"/></span>
+									<!-- +e.input-wrap-->
+								</label>
+							</div>
+							<div class="form-wrap__block">
+								<h4>Технические характеристики</h4>
+								<div class="row"> 
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Входное давление</span>
+												<select class="form-wrap__input form-select" name="Inlet-pressure">
+													<option>МПа</option>
+													<option>Бар</option>
+													<option>Атм</option>
+													<option>Кгс/см2</option>
+												</select>
+											</label>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Рабочее давлениее</span>
+												<select class="form-wrap__input form-select" name="Operating-pressure">
+													<option>МПа</option>
+													<option>Бар</option>
+													<option>Атм</option>
+													<option>Кгс/см2</option>
+												</select>
+											</label>
+										</div>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Минимальное давление</span><input class="form-wrap__input form-control" name="minimumPressureInletPressure" type="text" placeholder="2.5 Pa"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Максимальное давление</span><input class="form-wrap__input form-control" name="maximumPressureInletPressure" type="text" placeholder="2.5 Pa"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Минимальное давление</span><input class="form-wrap__input form-control" name="minimumPressureOperatingPressure" type="text" placeholder="2.5 Pa"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Максимальное давление</span><input class="form-wrap__input form-control" name="maximumPressureOperatingPressure" type="text" placeholder="2.5 Pa"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Расход газа</span>
+												<select class="form-wrap__input form-select" name="Gas-consumption">
+													<option>м3/час</option>
+													<option>л/мин</option>
+												</select>
+											</label>
+										</div>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Расход газа</span><input class="form-wrap__input form-control" name="gasConsumption" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Чистота газа</span><input class="form-wrap__input form-control" name="gasPurity" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<div class="form-wrap__input-title">Присоединение
+										</div>
+										<div class="form-wrap__radioWrap">
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="radio" name="accession" value="На входе" checked="checked"/><span class="custom-radio__dot"></span><span class="custom-radio__text">На входе</span>
+											</label>
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="radio" name="accession" value="На выходе"/><span class="custom-radio__dot"></span><span class="custom-radio__text">На выходе</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-12"> 
+										<div class="form-wrap__input-title">Тип переключения
+										</div>
+										<div class="form-wrap__radioWrap">
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="radio" name="switchType" value="Ручной" checked="checked"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Ручной</span>
+											</label>
+											<label class="custom-radio"><input class="custom-radio__radioInput" type="radio" name="switchType" value="Автоматический"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Автоматический</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Растояние от рампы до потребителя газа</span><input class="form-wrap__input form-control" name="distance-from-the-ramp-to-the-gas-consumer" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Температура эксплуатации</span><input class="form-wrap__input form-control" name="operating-temperature" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Область применения</span><input class="form-wrap__input form-control" name="application-area" type="text" placeholder="Заполните поле"/>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group">
+											<label><span class="form-wrap__input-title">Расположение рампы</span>
+												<select class="form-wrap__input form-select" name="Ramp-location">
+													<option>В помещении</option>
+													<option>На улице</option>
+													<option>В шкафу на улице</option>
+													<option>В шкафу на улице под навесом</option>
+													<option>В шкафу в помещении</option>
+												</select>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__block">
+								<h4>Опции</h4>
+								<div class="form-wrap__input-title">Выберите необходимые опции
+								</div>
+								<div class="row"> 
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="option" value="Продувка азотом" checked="checked"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Продувка азотом</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="option" value="Утепленный шкаф"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Утепленный шкаф</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="option" value="Дистанционный контроль давления"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Дистанционный контроль давления</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="option" value="Усиленный шкаф"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Усиленный шкаф</span>
+										</label>
+									</div>
+									<div class="col-md-6 col-lg-4"> 
+										<label class="custom-radio"><input class="custom-radio__radioInput" type="checkbox" name="option" value="Свето-звуковое оповещение"/><span class="custom-radio__dot"></span><span class="custom-radio__text">Свето-звуковое оповещение</span>
+										</label>
+									</div>
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Дополнительная информация</span><input class="form-wrap__input form-control" name="AdditionalInformation" type="text" placeholder="Заполните поле"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="text-center">
+									<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+									</button>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -123,7 +434,7 @@
 				<div class="footer__topLine">
 					<div class="container">
 						<div class="footer__row row">
-							<div class="footer__col col col-lg"><a class="footer__logo" href="/"><img src="img/svg/logo-white.svg" alt="" loading="lazy"/></a><a class="footer__questionnaire" href="#">
+							<div class="footer__col col col-lg"><a class="footer__logo" href="/"><img src="img/svg/logo-white.svg" alt="" loading="lazy"/></a><a class="footer__questionnaire" href="order.html">
 								<svg class="icon icon-question ">
 									<use xlink:href="img/svg/sprite.svg#question"></use>
 								</svg><span>Опросный лист</span></a>
@@ -156,7 +467,7 @@
 							<div class="col-md">
 								<p>&copy;&nbsp;<span class="year"></span> Официальный сайт компании &laquo;GCE Регулятор&raquo;.<br> Все права защищены. Не&nbsp;является публичной офертой.</p>
 							</div>
-							<div class="footer__rCol col-md-auto"><a class="footer__polite" href="#">Политика конфиденциальности</a><a class="footer__dev" href="#" target="_blank">Разработка сайта – <span>AD HEADS</span></a>
+							<div class="footer__rCol col-md-auto"><a class="footer__polite" href="#">Политика конфиденциальности</a><a class="footer__dev" href="https://ad-heads.ru/" target="_blank">Разработка сайта – <span>AD HEADS</span></a>
 							</div>
 						</div>
 					</div>
@@ -209,7 +520,6 @@
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
-		<script src="libs/hc-sticky/hc-sticky.js"></script>
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->

@@ -7,7 +7,7 @@ mixin sBenefit(data)
 			.row
 				mixin item(i, t, p)
 					+e.col.col-md-6.col-xl-3
-						+e.item(href="#")
+						+e.item
 							img.res-i(src=`img/svg/benefit-${i}.svg`, alt='')
 							h6!= t
 							p!= p

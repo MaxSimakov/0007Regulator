@@ -8,13 +8,21 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
+	
 	+b.menu-mobile--js.d-lg-none
 		//- +b.toggle-menu-mobile--js
 		//- 	span
 		+e.inner
-		
-			+mnu()
-			.text-right
+			.container
+				+mnu()
+					li.menu-item(itemprop="item" )
+						+b.questionnaire(href="#")
+							+icon('question')
+							span Опросный лист
+					li.menu-item(itemprop="item" )
+						+soc()
+
+				.text-right
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav

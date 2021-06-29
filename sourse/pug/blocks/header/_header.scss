@@ -2,8 +2,11 @@
 	// start .header
 	.header {
 		background-color: #fff;
-		z-index: 200;
-		position: relative;
+		z-index: 2000;
+		top: 0;
+		width: 100%;
+		left: 0;
+		position: fixed;
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -1,7 +1,123 @@
+mixin radio(t,n,typ="radio")
+	+b.LABEL.custom-radio
+		+e.INPUT.radioInput(type= typ name= n value= t)&attributes(attributes)
+		+e.dot
+		+e.SPAN.text= t
+		block
+
 mixin sQwiz(data)
 	// start sQwiz
 	+b.sQwiz.section#sQwiz&attributes(attributes)
 		.container
 			+b.form-wrap
 				form
+					+e.block
+						h4 Контакты
+						.row 
+							.col-lg-6 
+								+input('Заполните поле','text','Наименование организации','nameCompany')
+							.col-lg-6 
+								+input('Заполните поле','text','ФИО контактного лица','name')
+							.col-lg-6 
+								+input('Заполните поле','email','Электронная почта')
+							.col-lg-6 
+								+input('Заполните поле','tel','Контактный телефон')(required)
+					+e.block
+						h4 Техническая информация
+						.row
+							.col-md-6.col-lg-4 
+								+input('Заполните поле','text','Используемый газ','gasUsed')
+							.col-md-6.col-lg-4 
+								+input('Заполните поле','text','Количество рамп','numberRamps')
+							.col-md-6.col-lg-4 
+								+input('Заполните поле','text','Необходимый срок поставки','requiredDeliveryTime')
+							.col-md-6.col-lg-4 
+								+input('Заполните поле','text','Колличество баллонов','numberCylinders')
+							.col-md-6.col-lg-4 
+								+input('Заполните поле','text','Объем баллонов','cylinderVolume')
+							.col-md-6.col-lg-4 
+								+e.input-title Колличество плечей
+								+e.radioWrap
+									+radio('1','numberShoulders')(checked)
+									+radio('2','numberShoulders')
+					+e.block
+						h4 Исполнение
+						+e.input-title Выберите вариант установки оборудования
+						.row
+							.col-md-6.col-lg-4 
+								+e.radioWrap
+									+radio('В шкафу','installationOption','checkbox')(checked)
+							.col-md-6.col-lg-4 
+									+radio('На стене','installationOption','checkbox')
+								
+							.col-md-6.col-lg-4 
+									+radio('На панели','installationOption','checkbox')
+								
+							.col-md-6.col-lg-4 
+									+radio('В закрытом щите','installationOption','checkbox')
+								
+							.col-md-6.col-lg-4 
+									+radio('В кассете','installationOption','checkbox')
+								
+							.col-md-6.col-lg-4 
+									+radio('На стойке','installationOption','checkbox')
+									
+						+radio('Другое','installationOption','checkbox')
+							+input('Заполните поле','text','','other')
+					+e.block
+						h4 Технические характеристики
+						.row 
+							.col-lg-6
+								+select('Входное давление','МПа','Бар','Атм','Кгс/см2')(name="Inlet-pressure")
+							.col-lg-6
+								+select('Рабочее давлениее','МПа','Бар','Атм','Кгс/см2')(name="Operating-pressure")
+							.col-md-6.col-lg-4 
+								+input('2.5 Pa','text','Минимальное давление','minimumPressureInletPressure')
+							.col-md-6.col-lg-4 
+								+input('2.5 Pa','text','Максимальное давление','maximumPressureInletPressure')
+							.col-md-6.col-lg-4 
+								+input('2.5 Pa','text','Минимальное давление','minimumPressureOperatingPressure')
+							.col-md-6.col-lg-4 
+								+input('2.5 Pa','text','Максимальное давление','maximumPressureOperatingPressure')
+							.col-md-6.col-lg-4 
+								+select('Расход газа','м3/час','л/мин')(name="Gas-consumption")
+							.col-md-6.col-lg-4 
+								+input('Заполните поле','text','Расход газа','gasConsumption')
+							.col-md-6.col-lg-4 
+								+input('Заполните поле','text','Чистота газа','gasPurity')
+							.col-md-6.col-lg-4 
+								+e.input-title Присоединение
+								+e.radioWrap
+									+radio('На входе','accession')(checked)
+									+radio('На выходе','accession')
+							.col-12 
+								+e.input-title Тип переключения
+								+e.radioWrap
+									+radio('Ручной','switchType')(checked)
+									+radio('Автоматический','switchType')
+							.col-lg-6
+								+input('Заполните поле','text','Растояние от рампы до потребителя газа','distance-from-the-ramp-to-the-gas-consumer')
+							.col-lg-6
+								+input('Заполните поле','text','Температура эксплуатации','operating-temperature')
+							.col-lg-6
+								+input('Заполните поле','text','Область применения','application-area')
+							.col-lg-6
+								+select('Расположение рампы','В помещении','На улице','В шкафу на улице','В шкафу на улице под навесом','В шкафу в помещении')(name="Ramp-location")
+					+e.block
+						h4 Опции
+						+e.input-title Выберите необходимые опции
+						.row 
+							.col-md-6.col-lg-4 
+								+radio('Продувка азотом','option','checkbox')(checked)
+							.col-md-6.col-lg-4 
+								+radio('Утепленный шкаф','option','checkbox')
+							.col-md-6.col-lg-4 
+								+radio('Дистанционный контроль давления','option','checkbox')
+							.col-md-6.col-lg-4 
+								+radio('Усиленный шкаф','option','checkbox')
+							.col-md-6.col-lg-4 
+								+radio('Свето-звуковое оповещение','option','checkbox')
+						+input('Заполните поле','text','Дополнительная информация','AdditionalInformation')
+						.text-center
+							+e.btn.btn.btn-primary(type="submit") Отправить
 	// end sQwiz

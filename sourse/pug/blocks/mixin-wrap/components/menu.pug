@@ -2,16 +2,16 @@
 mixin mnu()
 	-
 		var nav= { 
-			"Преимущества":"#",
-			"Каталог":"#",
-			"Этапы работ":"#" ,
-			"Разрешительные документы":"#",
-			"Сделать запрос":"#",
-			"Контакты":"#",
+			"Преимущества":"#sBenefit",
+			"Каталог":"#sCatalog",
+			"Этапы работ":"#sStages" ,
+			"Разрешительные документы":"#sDocumetation",
+			"Сделать запрос":"#sForm",
+			"Контакты":"#sContact",
 			}
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		li.menu-item.menu-item-has-children
-			a(href="#" itemprop="url") Главная
+			a(href="/" itemprop="url") Главная
 			//- ul.sub-menu
 			//- 	-
 			//- 		var subnav= { 
@@ -24,5 +24,6 @@ mixin mnu()
 			//- 		li.menu-item(itemprop="item" ): a(href= sublinkPatch itemprop="url")= sublinkName
 		each linkPatch, linkName in nav
 			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
+		block
 
 //- menu

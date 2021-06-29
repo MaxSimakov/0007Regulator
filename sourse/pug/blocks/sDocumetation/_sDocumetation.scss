@@ -56,10 +56,18 @@
 	}
 
 	.swiper-button-hand-next {
-		right: 0;
+		right: -25px;
+		@media (min-width: 1300px) {
+			
+			right: -60px;
+		}
 	}
 	.swiper-button-hand-prev {
-		left: 0;
+		left: -25px;
+		@media (min-width: 1300px) {
+			
+			left: -60px;
+		}
 	}
 
 
@@ -80,6 +88,26 @@
 		background-color: $light;
 		&-active {
 			background-color: $primary;
+		}
+	}
+}
+
+.swiper-button-hand {
+	place-items: center;
+	background: #EAEAEA;
+	border: none;
+
+	.icon {
+		color: #8F9597;
+		@include mt;
+		font-size: rem(15);
+	}
+
+	&:hover {
+		background: $primary;
+
+		.icon {
+			color: #fff;
 		}
 	}
 }

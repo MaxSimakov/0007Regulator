@@ -16,7 +16,7 @@
 	// --sTPB: #{rem(40 / 2)};
 
 
-		--swiperArrowSize: #{rem(68)};
+		--swiperArrowSize: #{rem(40)};
 		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
 		--swiperBorderColorDef: var(--bs-primary);
 		--swiperColorDef: var(--bs-primary);
@@ -27,7 +27,10 @@
 		--swiperBgDefHover: #ffffff;
 
 
-	 
+		@include media-breakpoint-up(lg) {
+			--head-h: 131px;
+		}
+		--head-h: 78px;
 }
 
 @include media-breakpoint-up(xl) {}

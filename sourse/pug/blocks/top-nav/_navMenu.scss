@@ -8,6 +8,8 @@
 	margin-bottom: 0;
 	max-width: 100%;
 	flex-wrap: wrap;
+	padding-top: 1px;
+	margin-bottom: -1px;
 	@include media-breakpoint-up(lg) {
 		flex-direction: row;
 		justify-content: space-between;
@@ -21,7 +23,6 @@
 	a {
 		position: relative;
 		display: block;
-		text-align: center;
 		padding: rem(15) 0;
 		font-weight: bold;
 		font-size: rem(38);
@@ -32,6 +33,7 @@
 		@include media-breakpoint-up(lg) {
 			font-size: 16px;
 			line-height: 150%;
+			text-align: center;
 			&::after {
 				content: "";
 				@include mt;
