@@ -52,6 +52,10 @@
 	}
 	&__btns-row {
 		padding-bottom: rem(30);
+		@include media-breakpoint-down(lg) {
+			@include roww(15px);
+
+		}
 	}
 	&__tel {
 		display: inline-block;
