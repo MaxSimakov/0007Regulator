@@ -287,9 +287,17 @@ function eventHandler() {
 		loopFillGroupWithBlank: true,
 		touchRatio: 0.7,
 		slideToClickedSlide: true,
-		// freeModeMomentum: true,
+		autoplay: {
+			delay: 3000,
+		}, 
+	});
 
+	$(".headerBlock__slider--js").mouseenter(function () {
+		headerSlider.autoplay.stop();
+	});
 
+	$(".headerBlock__slider--js").mouseleave(function () {
+		headerSlider.autoplay.start();
 	});
 
 	const sDocumetationSlider = new Swiper('.sDocumetation__slider--js', {
