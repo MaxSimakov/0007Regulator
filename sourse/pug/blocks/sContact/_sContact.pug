@@ -21,20 +21,21 @@ mixin sContact()
 							+icon('telegram')
 							span Telegram
 				+e.txt или позвонить по телефону:
-				+e.tel(href='tel:+7(920)0162999') +7 (920) 016-29-99
+				+e.tel(href='tel:8(800)4005544') 8 (800) 400 55 44
 		+b.mapWrap 
 			+e.map#map
 				<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 				script.
 					ymaps.ready(function () {
+					let mark = [59.98399906410229,30.331139499999985];
 					var myMap = new ymaps.Map('map', {
-						center: [56.2501, 43.935],
+						center: mark,
 						zoom: 16
 							}, {
 								searchControlProvider: 'yandex#search'
 							}),
 
-							myPlacemark = new ymaps.Placemark([56.250197, 43.936412], {
+							myPlacemark = new ymaps.Placemark(mark, {
 								hintContent: 'Собственный значок метки',
 								balloonContent: 'Это красивая метка'
 							}, {
@@ -63,7 +64,7 @@ mixin sContact()
 			//- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7d9fde9f456413f4844ab85896c1261da6b7319cac10d4614357de6b73250aa6&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
 			+e.mapDescr
 				strong Адрес:
-				p Нижний Новгород, ул. Окская гавань, д. 3
+				p Санкт-Петербург, <br> Кантемировская 12
 				strong Режим работы:
 				p Пн-Пт: 9:00 - 18:00<br> Сб: 9:00 - 14:00<br> Вс: выходной
 

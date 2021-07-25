@@ -11,7 +11,7 @@ block variables
 	- let  bg= `main.jpg`
 
 block title
-	- let  title= 'Опросный лист'
+	- let  title= 'Опросный лист на газовую рампу'
 	title= title
 block pagecontent
 
@@ -22,7 +22,7 @@ block pagecontent
 		+top-nav()
 	+b.page-head 
 		.container
-			h1 Опросный лист
+			h1= title
 	+sQwiz
 	+footer()
 

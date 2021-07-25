@@ -97,16 +97,24 @@
 	}
 
 	.btn-sm {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		width: 100%;
-		max-width: 240px;
-		font-weight: normal;
-		font-size: rem(16);
-		line-height: 150%;
-		padding-left: rem(12);
-		padding-right: rem(12);
+		position: relative;
+		padding: 0;
+		padding-bottom: rem(10);
+		margin-bottom: rem(-10px);
+		&__toggle{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			max-width: 240px;
+			font-weight: normal;
+			font-size: rem(16);
+			line-height: 150%;
+			padding-top: rem(10);
+			padding-bottom: rem(10);
+			padding-left: rem(12);
+			padding-right: rem(12);
+		}
 		margin-top: rem(15);
 		@include media-breakpoint-up(md) {
 			margin-top: rem(24);
@@ -116,6 +124,66 @@
 		}
 		.icon {
 			font-size: rem(24);
+			margin-right: rem(10);
+		}
+		
+		&__toggle {
+			cursor: pointer;
+			display: inline-flex;
+		}
+		
+		&:hover {
+			--hover: ' ';
+		}
+		
+		&__dropdown {
+			visibility: var(--hover, hidden);
+			opacity: var(--hover, 0);
+			transform-origin: 0 0;
+			@include mt(.2s);
+			z-index: 40;
+			position: absolute;
+			background-color: #fff;
+			top: 100%;
+			left: 50%;
+			margin-left: rem(-100);
+			background: #FFFFFF;
+			border: 1px solid #EAEAEA;
+			box-sizing: border-box;
+			box-shadow: 0px 10px 25px rgba(51, 51, 51, 0.1);
+
+			&::before {
+				content: '';
+				width: 10px;
+				height: 10px;
+				background-color: #fff;
+				position: absolute;
+				// bottom: 100%;
+				pointer-events: none;
+				top: -6px;
+				left: 50%;
+				transform: translateX(-50%) rotate(45deg);
+				border-top: 1px solid #EAEAEA;
+				border-left: 1px solid #EAEAEA;
+			}
+
+			a {
+				display: block;
+				position: relative;
+				z-index: 4;
+				padding: rem(9) rem(12);
+				color: $body-color;
+				width: rem(200);
+
+				&:hover {
+					color: $primary;
+				}
+
+				&:first-child {
+					border-bottom: 1px solid #EAEAEA;
+				}
+			}
+
 		}
 	}
 	@include media-breakpoint-up(xl) {

@@ -11,9 +11,13 @@ mixin sStages(data)
 							img.res-i(src=`img/svg/stages-${i}.svg`, alt='')
 							p!= p
 							if btn
-								+b.btn-sm.btn.btn-outline-warning(href='order.html' )
-									+icon('question') 
-									span Открыть опросный лист
+								+b.btn-sm
+									+e.toggle.btn.btn-outline-warning
+										+icon('question') 
+										span Открыть опросный лист 
+									+e.dropdown
+										a(href="order.html") На газовую рампу
+										a(href="order2.html") На регулятор
 
 				+item(1 , `Предоставьте все необходимые данные о своем проекте, заполнив опросный лист.`, `btn`)
 				+item(2 , `Наш специалист разработает чертеж и коммерческое предложение и отправит вам.`)

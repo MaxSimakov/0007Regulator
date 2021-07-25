@@ -6,9 +6,13 @@ mixin footer()
 					+e.col.col.col-lg
 						+e.logo(href="/")
 							img(src="img/svg/logo-white.svg", alt="" loading="lazy")
-						+e.questionnaire(href="order.html")
-							+icon('question')
-							span Опросный лист
+						+e.questionnaire
+							+e.toggle
+								+icon('question')
+								span Опросный лист
+							+e.dropdown
+								a(href="order.html") На газовую рампу
+								a(href="order2.html") На регулятор
 					+e.socCol.col-md-auto
 						+soc()
 					.col.col-md-auto.d-none.d-lg-block

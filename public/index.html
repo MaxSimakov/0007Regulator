@@ -2,8 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
-		<meta name="description" content="о чем страница">
+		<title>Регуляторы давления и газовые рампы GCE Druva</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
 		<script>
@@ -37,13 +36,17 @@
 							<li class="menu-item" itemprop="item"><a href="#sBenefit" itemprop="url">Преимущества</a></li>
 							<li class="menu-item" itemprop="item"><a href="#sCatalog" itemprop="url">Каталог</a></li>
 							<li class="menu-item" itemprop="item"><a href="#sStages" itemprop="url">Этапы работ</a></li>
-							<li class="menu-item" itemprop="item"><a href="#sDocumetation" itemprop="url">Разрешительные документы</a></li>
 							<li class="menu-item" itemprop="item"><a href="#sForm" itemprop="url">Сделать запрос</a></li>
 							<li class="menu-item" itemprop="item"><a href="#sContact" itemprop="url">Контакты</a></li>
 							<li class="menu-item" itemprop="item"><a class="questionnaire" href="#">
 								<svg class="icon icon-question ">
 									<use xlink:href="img/svg/sprite.svg#question"></use>
-								</svg><span>Опросный лист</span></a>
+								</svg><span>Опросный лист на газовую рампу</span></a>
+							</li>
+							<li class="menu-item" itemprop="item"><a class="questionnaire" href="#">
+								<svg class="icon icon-question ">
+									<use xlink:href="img/svg/sprite.svg#question"></use>
+								</svg><span>Опросный лист на регулятор</span></a>
 							</li>
 							<li class="menu-item" itemprop="item">
 								<div class="soc"><a class="soc__item" href="#" target="_blank">
@@ -72,10 +75,16 @@
 						<div class="row align-items-center">
 							<div class="col col-sm-auto"><a class="topLine__logo" href="/"><img src="img/svg/logo.svg" alt=""/></a>
 							</div>
-							<div class="col d-none d-md-block"><a class="questionnaire" href="order.html">
-								<svg class="icon icon-question ">
-									<use xlink:href="img/svg/sprite.svg#question"></use>
-								</svg><span>Опросный лист</span></a>
+							<div class="col d-none d-md-block">
+								<div class="questionnaire">
+									<div class="questionnaire__toggle">
+										<svg class="icon icon-question ">
+											<use xlink:href="img/svg/sprite.svg#question"></use>
+										</svg><span>Опросный лист</span>
+									</div>
+									<div class="questionnaire__dropdown"><a href="order.html">На газовую рампу</a><a href="order2.html">На регулятор</a>
+									</div>
+								</div>
 							</div>
 							<div class="col-auto d-none d-md-block">
 								<div class="soc"><a class="soc__item" href="#" target="_blank">
@@ -114,7 +123,6 @@
 									<li class="menu-item" itemprop="item"><a href="#sBenefit" itemprop="url">Преимущества</a></li>
 									<li class="menu-item" itemprop="item"><a href="#sCatalog" itemprop="url">Каталог</a></li>
 									<li class="menu-item" itemprop="item"><a href="#sStages" itemprop="url">Этапы работ</a></li>
-									<li class="menu-item" itemprop="item"><a href="#sDocumetation" itemprop="url">Разрешительные документы</a></li>
 									<li class="menu-item" itemprop="item"><a href="#sForm" itemprop="url">Сделать запрос</a></li>
 									<li class="menu-item" itemprop="item"><a href="#sContact" itemprop="url">Контакты</a></li>
 								</ul>
@@ -254,7 +262,7 @@
 								<div class="sBenefit__col col-md-6 col-xl-3">
 									<div class="sBenefit__item"><img class="res-i" src="img/svg/benefit-2.svg" alt=""/>
 										<h6>Всегда в наличии</h6>
-										<p>Вся продукция в наличии на складе в Москве и Нижнем Новгороде</p>
+										<p>Большая часть продукции в&nbsp;наличии в&nbsp;Москве, СПБ и&nbsp;НН</p>
 									</div>
 								</div>
 								<div class="sBenefit__col col-md-6 col-xl-3">
@@ -1039,10 +1047,16 @@
 					<div class="row justify-content-center">
 								<div class="sStages__col col-lg-6 col-xl-4">
 									<div class="sStages__item"><img class="res-i" src="img/svg/stages-1.svg" alt=""/>
-										<p>Предоставьте все необходимые данные о своем проекте, заполнив опросный лист.</p><a class="btn-sm btn btn-outline-warning" href="order.html">
-										<svg class="icon icon-question ">
-											<use xlink:href="img/svg/sprite.svg#question"></use>
-										</svg><span>Открыть опросный лист</span></a>
+										<p>Предоставьте все необходимые данные о своем проекте, заполнив опросный лист.</p>
+										<div class="btn-sm">
+											<div class="btn-sm__toggle btn btn-outline-warning">
+												<svg class="icon icon-question ">
+													<use xlink:href="img/svg/sprite.svg#question"></use>
+												</svg><span>Открыть опросный лист </span>
+											</div>
+											<div class="btn-sm__dropdown"><a href="order.html">На газовую рампу</a><a href="order2.html">На регулятор</a>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="sStages__col col-lg-6 col-xl-4">
@@ -1083,96 +1097,6 @@
 				</div>
 			</section>
 			<!-- end sPartner-->
-			<!-- start sDocumetation-->
-			<section class="sDocumetation section" id="sDocumetation">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>Разрешительные документы</h2>
-					</div>
-					<div class="sDocumetation__sliderWrap">
-						<div class="sDocumetation__slider sDocumetation__slider--js swiper-container">
-							<div class="swiper-wrapper"><a class="sDocumetation__slide swiper-slide" href="img/@2x/document.jpg" data-fancybox="documetation">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/document.webp"/><img src="img/@2x/document.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--><span class="sDocumetation__zoom"> 
-									<svg class="icon icon-visibility ">
-										<use xlink:href="img/svg/sprite.svg#visibility"></use>
-									</svg></span></a><a class="sDocumetation__slide swiper-slide" href="img/@2x/document.jpg" data-fancybox="documetation">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/document.webp"/><img src="img/@2x/document.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--><span class="sDocumetation__zoom"> 
-									<svg class="icon icon-visibility ">
-										<use xlink:href="img/svg/sprite.svg#visibility"></use>
-									</svg></span></a><a class="sDocumetation__slide swiper-slide" href="img/@2x/document.jpg" data-fancybox="documetation">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/document.webp"/><img src="img/@2x/document.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--><span class="sDocumetation__zoom"> 
-									<svg class="icon icon-visibility ">
-										<use xlink:href="img/svg/sprite.svg#visibility"></use>
-									</svg></span></a><a class="sDocumetation__slide swiper-slide" href="img/@2x/document.jpg" data-fancybox="documetation">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/document.webp"/><img src="img/@2x/document.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--><span class="sDocumetation__zoom"> 
-									<svg class="icon icon-visibility ">
-										<use xlink:href="img/svg/sprite.svg#visibility"></use>
-									</svg></span></a><a class="sDocumetation__slide swiper-slide" href="img/@2x/document.jpg" data-fancybox="documetation">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/document.webp"/><img src="img/@2x/document.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--><span class="sDocumetation__zoom"> 
-									<svg class="icon icon-visibility ">
-										<use xlink:href="img/svg/sprite.svg#visibility"></use>
-									</svg></span></a><a class="sDocumetation__slide swiper-slide" href="img/@2x/document.jpg" data-fancybox="documetation">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/document.webp"/><img src="img/@2x/document.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--><span class="sDocumetation__zoom"> 
-									<svg class="icon icon-visibility ">
-										<use xlink:href="img/svg/sprite.svg#visibility"></use>
-									</svg></span></a><a class="sDocumetation__slide swiper-slide" href="img/@2x/document.jpg" data-fancybox="documetation">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/document.webp"/><img src="img/@2x/document.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--><span class="sDocumetation__zoom"> 
-									<svg class="icon icon-visibility ">
-										<use xlink:href="img/svg/sprite.svg#visibility"></use>
-									</svg></span></a><a class="sDocumetation__slide swiper-slide" href="img/@2x/document.jpg" data-fancybox="documetation">
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/document.webp"/><img src="img/@2x/document.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture--><span class="sDocumetation__zoom"> 
-									<svg class="icon icon-visibility ">
-										<use xlink:href="img/svg/sprite.svg#visibility"></use>
-									</svg></span></a>
-							</div>
-							<div class="swiper-pagination"></div>
-						</div>
-						<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev d-none d-lg-grid">
-							<svg class="icon icon-chevron-left ">
-								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-							</svg>
-						</div>
-						<div class="swiper-button-hand swiper-button-hand-next swiper-button-next d-none d-lg-grid">
-							<svg class="icon icon-chevron-right ">
-								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-							</svg>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end sDocumetation-->
 			<!-- start sForm-->
 			<section class="sForm section" id="sForm">
 				<!-- picture-->
@@ -1244,21 +1168,22 @@
 							</div>
 						</div>
 						<div class="sContact__txt">или позвонить по телефону:
-						</div><a class="sContact__tel" href="tel:+7(920)0162999">+7 (920) 016-29-99</a>
+						</div><a class="sContact__tel" href="tel:8(800)4005544">8 (800) 400 55 44</a>
 					</div>
 				</div>
 				<div class="mapWrap"> 
 					<div class="mapWrap__map" id="map"><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 						<script>
 							ymaps.ready(function () {
+							let mark = [59.98399906410229,30.331139499999985];
 							var myMap = new ymaps.Map('map', {
-								center: [56.2501, 43.935],
+								center: mark,
 								zoom: 16
 									}, {
 										searchControlProvider: 'yandex#search'
 									}),
 							
-									myPlacemark = new ymaps.Placemark([56.250197, 43.936412], {
+									myPlacemark = new ymaps.Placemark(mark, {
 										hintContent: 'Собственный значок метки',
 										balloonContent: 'Это красивая метка'
 									}, {
@@ -1287,7 +1212,7 @@
 						</script>
 					</div>
 					<div class="mapWrap__mapDescr"><strong>Адрес:</strong>
-						<p>Нижний Новгород, ул. Окская гавань, д. 3</p><strong>Режим работы:</strong>
+						<p>Санкт-Петербург, <br> Кантемировская 12</p><strong>Режим работы:</strong>
 						<p>Пн-Пт: 9:00 - 18:00<br> Сб: 9:00 - 14:00<br> Вс: выходной</p>
 					</div>
 				</div>
@@ -1297,10 +1222,16 @@
 				<div class="footer__topLine">
 					<div class="container">
 						<div class="footer__row row">
-							<div class="footer__col col col-lg"><a class="footer__logo" href="/"><img src="img/svg/logo-white.svg" alt="" loading="lazy"/></a><a class="footer__questionnaire" href="order.html">
-								<svg class="icon icon-question ">
-									<use xlink:href="img/svg/sprite.svg#question"></use>
-								</svg><span>Опросный лист</span></a>
+							<div class="footer__col col col-lg"><a class="footer__logo" href="/"><img src="img/svg/logo-white.svg" alt="" loading="lazy"/></a>
+								<div class="footer__questionnaire">
+									<div class="footer__toggle">
+										<svg class="icon icon-question ">
+											<use xlink:href="img/svg/sprite.svg#question"></use>
+										</svg><span>Опросный лист</span>
+									</div>
+									<div class="footer__dropdown"><a href="order.html">На газовую рампу</a><a href="order2.html">На регулятор</a>
+									</div>
+								</div>
 							</div>
 							<div class="footer__socCol col-md-auto">
 								<div class="soc"><a class="soc__item" href="#" target="_blank">
@@ -1352,10 +1283,16 @@
 						</div>
 						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя"/>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="name" type="text" placeholder="Ваше Имя"/>
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон" required="required"/> 
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон" required="required"/>  
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="orgname" type="text" placeholder="Наименование организации"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Электронная почта"/>
 					</div>
 					<!-- +e.input-wrap-->
 					<button class="form-wrap__btn btn" type="submit">Отправить заявку

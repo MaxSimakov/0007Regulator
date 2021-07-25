@@ -7,9 +7,13 @@ mixin topLine()
 					+e.logo(href="/")
 						img(src="img/svg/logo.svg", alt="")
 				.col.d-none.d-md-block
-					+b.questionnaire(href="order.html")
-						+icon('question')
-						span Опросный лист
+					+b.questionnaire
+						+e.toggle
+							+icon('question')
+							span Опросный лист
+						+e.dropdown
+							a(href="order.html") На газовую рампу
+							a(href="order2.html") На регулятор
 				.col-auto.d-none.d-md-block
 					+soc()
 				.col.col-md-auto

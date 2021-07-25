@@ -2,8 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Опросный лист</title>
-		<meta name="description" content="о чем страница">
+		<title>Опросный лист на газовую рампу</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
 		<script>
@@ -37,13 +36,17 @@
 							<li class="menu-item" itemprop="item"><a href="#sBenefit" itemprop="url">Преимущества</a></li>
 							<li class="menu-item" itemprop="item"><a href="#sCatalog" itemprop="url">Каталог</a></li>
 							<li class="menu-item" itemprop="item"><a href="#sStages" itemprop="url">Этапы работ</a></li>
-							<li class="menu-item" itemprop="item"><a href="#sDocumetation" itemprop="url">Разрешительные документы</a></li>
 							<li class="menu-item" itemprop="item"><a href="#sForm" itemprop="url">Сделать запрос</a></li>
 							<li class="menu-item" itemprop="item"><a href="#sContact" itemprop="url">Контакты</a></li>
 							<li class="menu-item" itemprop="item"><a class="questionnaire" href="#">
 								<svg class="icon icon-question ">
 									<use xlink:href="img/svg/sprite.svg#question"></use>
-								</svg><span>Опросный лист</span></a>
+								</svg><span>Опросный лист на газовую рампу</span></a>
+							</li>
+							<li class="menu-item" itemprop="item"><a class="questionnaire" href="#">
+								<svg class="icon icon-question ">
+									<use xlink:href="img/svg/sprite.svg#question"></use>
+								</svg><span>Опросный лист на регулятор</span></a>
 							</li>
 							<li class="menu-item" itemprop="item">
 								<div class="soc"><a class="soc__item" href="#" target="_blank">
@@ -72,10 +75,16 @@
 						<div class="row align-items-center">
 							<div class="col col-sm-auto"><a class="topLine__logo" href="/"><img src="img/svg/logo.svg" alt=""/></a>
 							</div>
-							<div class="col d-none d-md-block"><a class="questionnaire" href="order.html">
-								<svg class="icon icon-question ">
-									<use xlink:href="img/svg/sprite.svg#question"></use>
-								</svg><span>Опросный лист</span></a>
+							<div class="col d-none d-md-block">
+								<div class="questionnaire">
+									<div class="questionnaire__toggle">
+										<svg class="icon icon-question ">
+											<use xlink:href="img/svg/sprite.svg#question"></use>
+										</svg><span>Опросный лист</span>
+									</div>
+									<div class="questionnaire__dropdown"><a href="order.html">На газовую рампу</a><a href="order2.html">На регулятор</a>
+									</div>
+								</div>
 							</div>
 							<div class="col-auto d-none d-md-block">
 								<div class="soc"><a class="soc__item" href="#" target="_blank">
@@ -114,7 +123,6 @@
 									<li class="menu-item" itemprop="item"><a href="#sBenefit" itemprop="url">Преимущества</a></li>
 									<li class="menu-item" itemprop="item"><a href="#sCatalog" itemprop="url">Каталог</a></li>
 									<li class="menu-item" itemprop="item"><a href="#sStages" itemprop="url">Этапы работ</a></li>
-									<li class="menu-item" itemprop="item"><a href="#sDocumetation" itemprop="url">Разрешительные документы</a></li>
 									<li class="menu-item" itemprop="item"><a href="#sForm" itemprop="url">Сделать запрос</a></li>
 									<li class="menu-item" itemprop="item"><a href="#sContact" itemprop="url">Контакты</a></li>
 								</ul>
@@ -127,7 +135,7 @@
 			<!-- end header-->
 			<div class="page-head"> 
 				<div class="container">
-					<h1>Опросный лист</h1>
+					<h1>Опросный лист на газовую рампу</h1>
 				</div>
 			</div>
 			<!-- start sQwiz-->
@@ -439,10 +447,16 @@
 				<div class="footer__topLine">
 					<div class="container">
 						<div class="footer__row row">
-							<div class="footer__col col col-lg"><a class="footer__logo" href="/"><img src="img/svg/logo-white.svg" alt="" loading="lazy"/></a><a class="footer__questionnaire" href="order.html">
-								<svg class="icon icon-question ">
-									<use xlink:href="img/svg/sprite.svg#question"></use>
-								</svg><span>Опросный лист</span></a>
+							<div class="footer__col col col-lg"><a class="footer__logo" href="/"><img src="img/svg/logo-white.svg" alt="" loading="lazy"/></a>
+								<div class="footer__questionnaire">
+									<div class="footer__toggle">
+										<svg class="icon icon-question ">
+											<use xlink:href="img/svg/sprite.svg#question"></use>
+										</svg><span>Опросный лист</span>
+									</div>
+									<div class="footer__dropdown"><a href="order.html">На газовую рампу</a><a href="order2.html">На регулятор</a>
+									</div>
+								</div>
 							</div>
 							<div class="footer__socCol col-md-auto">
 								<div class="soc"><a class="soc__item" href="#" target="_blank">
@@ -494,10 +508,16 @@
 						</div>
 						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя"/>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="name" type="text" placeholder="Ваше Имя"/>
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон" required="required"/> 
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон" required="required"/>  
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="orgname" type="text" placeholder="Наименование организации"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Электронная почта"/>
 					</div>
 					<!-- +e.input-wrap-->
 					<button class="form-wrap__btn btn" type="submit">Отправить заявку
