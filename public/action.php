@@ -85,6 +85,9 @@ $html = '
     if (!empty($_POST['numberShoulders'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Колличество плечей:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['numberShoulders'] . '</b></td>';
     }
+    if (!empty($_POST['sreda'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Среда:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['sreda'] . '</b></td>';
+    }
     if (!empty($_POST['qwiz'])) {
    $html .= ' <tr style="background-color: #f8f8f8;">  <td colspan="2" style="padding: 10px; border: #e9e9e9 1px solid;"><h4>Исполнение: </h4></td></tr>';
    }
