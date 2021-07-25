@@ -76,14 +76,14 @@
 	}
 
 
-	&__mapWrap {
-		position: relative;
-		width: 100%;
-		min-height: 460px;
-		display: flex;
-		flex-direction: column;
+	// &__mapWrap {
+	// 	position: relative;
+	// 	width: 100%;
+	// 	min-height: 460px;
+	// 	display: flex;
+	// 	flex-direction: column;
 		
-	}
+	// }
 
 	iframe, script {
 		flex-grow: 1;
@@ -145,6 +145,10 @@
 	position: relative;
 	border-radius: 0 0 15px 15px;
 	overflow: hidden;
+	width: 100%;
+	min-height: 460px;
+	display: flex;
+	flex-direction: column;
 
 	&__mapDescr {
 		left: 20%;
@@ -183,8 +187,11 @@
 	// }
 }
 
+// #map {
+// 	@include media-breakpoint-up(md) {
+// 		height: rem(460);
+// 	}
+// }
 #map {
-	@include media-breakpoint-up(md) {
 		height: rem(460);
-	}
 }

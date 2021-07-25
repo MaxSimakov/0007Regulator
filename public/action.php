@@ -12,7 +12,8 @@ $mail->CharSet = 'utf-8';
 ///who send 
 $mail->setFrom('info@info.com','info info');
 
- $mail->addAddress('wol1414@gmail.com');
+ $mail->addAddress('promservisnn@list.ru');
+ $mail->addAddress('leads@ad-heads.ru');
  // $mail->addAddress('horenkova369@gmail.com');
 // $mail->addAddress('stab@inbox.support');
 
@@ -140,6 +141,12 @@ $html = '
     
     if (!empty($_POST['accession'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Присоединение:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['accession'] . '</b></td>';
+    }
+    if (!empty($_POST['accessionInner'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Присоединение на входе:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['accessionInner'] . '</b></td>';
+    }
+    if (!empty($_POST['accessionOut'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Присоединение на выходе:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['accessionOut'] . '</b></td>';
     }
 
    

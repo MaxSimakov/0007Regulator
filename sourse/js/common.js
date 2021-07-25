@@ -225,12 +225,12 @@ function eventHandler() {
 	JSCCommon.getCurrentYear('.year');
 
 	// JSCCommon.CustomInputFile(); 
-	var x = window.location.host;
-	let screenName;
-	screenName = document.body.dataset.bg;
-	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	}
+	// var x = window.location.host;
+	// let screenName;
+	// screenName = document.body.dataset.bg;
+	// if (screenName && x.includes("localhost:30")) {
+	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+	// }
  
 
 
@@ -256,25 +256,25 @@ function eventHandler() {
 		},
 	}
 
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+	// const swiper4 = new Swiper('.sBanners__slider--js', {
+	// 	// slidesPerView: 5,
+	// 	...defaultSl,
+	// 	slidesPerView: 'auto',
+	// 	freeMode: true,
+	// 	loopFillGroupWithBlank: true,
+	// 	touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	freeModeMomentum: true,
 
-	});
+	// });
 	const headerSlider = new Swiper('.headerBlock__slider--js', {
 		watchOverflow: true,
 		spaceBetween: 0,
 		loop: true,
-		navigation: {
-			nextEl: '.headerBlock .swiper-button-next',
-			prevEl: '.headerBlock .swiper-button-prev',
-		},
+		// navigation: {
+		// 	nextEl: '.headerBlock .swiper-button-next',
+		// 	prevEl: '.headerBlock .swiper-button-prev',
+		// },
 		pagination: {
 			el: ' .swiper-pagination',
 			type: 'bullets',

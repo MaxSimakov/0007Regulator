@@ -12,7 +12,7 @@ mixin sForm()
 					+form-wrap().text-center
 						h3 Сделать запрос
 						p Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в ближайшее время
-						+input('Ваше имя')
+						+input('Ваше имя','text','','name')
 						+input('Ваш телефон','tel')(required)
 						+e.btn.btn.btn-primary(type="submit") Отправить
 						+policy
