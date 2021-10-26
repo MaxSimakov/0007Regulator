@@ -545,7 +545,7 @@ mixin sCatalogCard(data)
 					+icon('doc')
 			+e.img
 				img(loading="lazy" src=`img/@2x/sCatalogCard-${data.imgGroup}-${data.imgNum}.png` alt="")
-			+e.title(href="#")=data.title
+			+e.title=data.title
 			+e.tags
 				-for(let tag of data.tags)
 					+e.tag=tag
