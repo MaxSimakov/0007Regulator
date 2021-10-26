@@ -10,7 +10,7 @@ mixin card(i,p)
 		.card().text-center
 			+pic(`prod-${i}.png`,'',0)
 			//- img.card-img-top(src=`` alt= p)
-			
+
 			p.card-text= p
 			a.btn.btn-primary.w-100(href='#modal-call' data-title=`Запросить цену` data-order=`Запросить цену: ${p}`).link-modal-js Запросить цену
 mixin sCatalog(data)
@@ -25,7 +25,401 @@ mixin sCatalog(data)
 					.tabs__btn.tabs-main__btn Медицинское оборудование
 				.tabs__wrap.tabs-main__wrap
 					.tabs__content.tabs-main__content.active
-						.tabs.tabs-inner
+						+b.catalogF.cTabs-js
+							+e.row.row
+								.col-lg-4.col-xl-3
+									+e.filter.dd-group-js
+										+sCatalogDDitem({
+											addClasses: 'active',
+											title: 'Рампы',
+										})
+											.mixit-chb-group-js
+												+sCatalogDDChb('Малый расход 20м3')(checked value=".tag-1")
+												+sCatalogDDChb('Cредний расход 100м3')(checked value=".tag-2")
+												+sCatalogDDChb('Высокий расход 250м3')(checked value=".tag-3")
+										+sCatalogDDitem({
+											title: 'Посты',
+										})
+											.mixit-chb-group-js
+												+sCatalogDDChb('Пост газоразборный  DINSET')(checked value=".tag-1")
+												+sCatalogDDChb('Пост газоразборный  UNISET')(checked value=".tag-2")
+												+sCatalogDDChb('Пост газоразборный  UNISET +')(checked value=".tag-3")
+												+sCatalogDDChb('Пост газоразборный HF-SET')(checked value=".tag-4")
+										+sCatalogDDitem({
+											title: 'Рамповые и сетевые редукторы',
+										})
+											.mixit-chb-group-js
+												+sCatalogDDChb('Рамповые редукторы')(checked value=".tag-1")
+												+sCatalogDDChb('Сетевые редукторы')(checked value=".tag-2")
+										+sCatalogDDitem({
+											title: 'Аксессуары',
+											addItemClasses: 'no-content',
+										})
+								.col-lg
+									.cTabs-content-group-js
+										.cTabs-content-js.active
+											//-1st tab
+											+e.cards-row.row.mixit-cont-js
+												+sCatalogCard({
+													imgGroup: 1,
+													imgNum: 1,
+													title: 'Рампа разрядная MTLX',
+													linkHref: 'https://disk.yandex.ru/d/MmAWOeH5tQZV2A',
+													tags: [
+														'Малый расход 20м3',
+													],
+												})(class="mix tag-1")
+												+sCatalogCard({
+													imgGroup: 1,
+													imgNum: 2,
+													title: 'Рампа перепускная MTLM',
+													linkHref: 'https://disk.yandex.ru/d/AlK0eD7gVuxyIA',
+													tags: [
+														'Малый расход 20м3',
+													],
+												})(class="mix tag-1")
+												+sCatalogCard({
+													imgGroup: 1,
+													imgNum: 3,
+													title: 'Рампа полуавтоматическая MTLS',
+													linkHref: 'https://disk.yandex.ru/d/qilHQYd4Ld6f2g',
+													tags: [
+														'Малый расход 20м3',
+													],
+												})(class="mix tag-1")
+												//-
+												+sCatalogCard({
+													imgGroup: 1,
+													imgNum: 4,
+													title: 'Рампа разрядная MTLT на 3 баллона',
+													linkHref: 'https://disk.yandex.ru/d/p8MTUBJI7UIPog',
+													tags: [
+														'Малый расход 20м3',
+													],
+												})(class="mix tag-1")
+												+sCatalogCard({
+													imgGroup: 1,
+													imgNum: 5,
+													title: 'Рампа разрядная MTMH0XS000',
+													linkHref: 'https://disk.yandex.ru/d/NQuZi3Gx8FymOA',
+													tags: [
+														'Средний расход 100м3',
+													],
+												})(class="mix tag-2")
+												+sCatalogCard({
+													imgGroup: 1,
+													imgNum: 6,
+													title: 'Рампа перепускная MTMH0MSP00',
+													linkHref: 'https://disk.yandex.ru/d/cH1yFNXwl9wafg',
+													tags: [
+														'Средний расход 100м3',
+													],
+												})(class="mix tag-2")
+												//
+												+sCatalogCard({
+													imgGroup: 1,
+													imgNum: 7,
+													title: 'Рампа полуавтоматическая MTMH0SSP00',
+													linkHref: 'https://disk.yandex.ru/d/Y4FMKJJHcESj-w',
+													tags: [
+														'Средний расход 100м3',
+													],
+												})(class="mix tag-2")
+												+sCatalogCard({
+													imgGroup: 1,
+													imgNum: 8,
+													title: 'Рампа разрядная MM400-1',
+													linkHref: 'https://disk.yandex.ru/d/UXJySFQ1PpPw9A',
+													tags: [
+														'Высокий расход 250м3',
+													],
+												})(class="mix tag-3")
+												+sCatalogCard({
+													imgGroup: 1,
+													imgNum: 9,
+													title: 'Рампа перепускная MM400-2',
+													linkHref: 'https://disk.yandex.ru/d/izxVp1YHErEfjg',
+													tags: [
+														'Высокий расход 250м3',
+													],
+												})(class="mix tag-3")
+												//-
+												+sCatalogCard({
+													imgGroup: 1,
+													imgNum: 10,
+													title: 'Рампа полуавтоматическая MS400',
+													linkHref: 'https://disk.yandex.ru/d/jm5eFPceSIFLJw',
+													tags: [
+														'Высокий расход 250м3',
+													],
+												})(class="mix tag-3")
+												+sCatalogCard({
+													imgGroup: 1,
+													imgNum: 1,
+													title: 'Рампа разрядная MB400 на 3 баллона',
+													linkHref: 'https://disk.yandex.ru/d/vpPnSO40l9ms1g',
+													tags: [
+														'Высокий расход 250м3',
+													],
+												})(class="mix tag-3")
+										.cTabs-content-js
+											+e.cards-row.row.mixit-cont-js
+												+sCatalogCard({
+													imgGroup: 2,
+													imgNum: 1,
+													title: 'Пост газоразборный DINLINE',
+													linkHref: 'https://disk.yandex.ru/d/AQ5V3CiFbXfFvQ',
+													tags: [
+														'Пост газоразборный DINSET',
+													],
+												})(class="mix tag-1")
+												+sCatalogCard({
+													imgGroup: 2,
+													imgNum: 2,
+													title: 'Пост газоразборный DINFLOW ротаметр',
+													linkHref: 'https://disk.yandex.ru/d/w24ERgSq4rTFNw',
+													tags: [
+														'Пост газоразборный DINSET',
+													],
+												})(class="mix tag-1")
+												+sCatalogCard({
+													imgGroup: 2,
+													imgNum: 3,
+													title: 'Пост газоразборный DINSET FLOW ротаметр',
+													linkHref: 'https://disk.yandex.ru/d/m2PdojLzObHKzA',
+													tags: [
+														'Пост газоразборный DINSET',
+													],
+												})(class="mix tag-1")
+												//-
+												+sCatalogCard({
+													imgGroup: 2,
+													imgNum: 4,
+													title: 'Пост газоразборный DINSET',
+													linkHref: 'https://disk.yandex.ru/d/xPvnzTOJGNt6mg',
+													tags: [
+														'Пост газоразборный DINSET',
+													],
+												})(class="mix tag-1")
+												+sCatalogCard({
+													imgGroup: 2,
+													imgNum: 5,
+													title: 'Пост газоразборный DINSET двойной',
+													linkHref: 'https://disk.yandex.ru/d/MvA8torTwaEESQ',
+													tags: [
+														'Пост газоразборный DINSET',
+													],
+												})(class="mix tag-1")
+												+sCatalogCard({
+													imgGroup: 2,
+													imgNum: 6,
+													title: 'Пост газоразборный DINSET тройной',
+													linkHref: 'https://disk.yandex.ru/d/Ct9bwwXfgrUEKA',
+													tags: [
+														'Пост газоразборный DINSET',
+													],
+												})(class="mix tag-1")
+												//-
+												+sCatalogCard({
+													imgGroup: 2,
+													imgNum: 7,
+													title: 'Пост газоразборный UNISET',
+													linkHref: 'https://disk.yandex.ru/d/p6AUEwQ_7hSXbg',
+													tags: [
+														'Пост газоразборный UNISET',
+													],
+												})(class="mix tag-2")
+												+sCatalogCard({
+													imgGroup: 2,
+													imgNum: 8,
+													title: 'Пост газоразборный UNISET FLOW ротаметр',
+													linkHref: 'https://disk.yandex.ru/d/iXPU4DUc95mNGg',
+													tags: [
+														'Пост газоразборный UNISET',
+													],
+												})(class="mix tag-2")
+												+sCatalogCard({
+													imgGroup: 2,
+													imgNum: 9,
+													title: 'Пост газоразборный UNISET TWINFLOW  2 ротаметра',
+													linkHref: 'https://disk.yandex.ru/d/KN0YjwFcsiUkXw',
+													tags: [
+														'Пост газоразборный UNISET',
+													],
+												})(class="mix tag-2")
+												//-
+												+sCatalogCard({
+													imgGroup: 2,
+													imgNum: 10,
+													title: 'Пост газоразборный UNISET двойной',
+													linkHref: 'https://disk.yandex.ru/d/ra1UpSRS2j3C-A',
+													tags: [
+														'Пост газоразборный UNISET',
+													],
+												})(class="mix tag-2")
+												+sCatalogCard({
+													imgGroup: 2,
+													imgNum: 11,
+													title: 'Пост газоразборный UNISET+',
+													linkHref: 'https://disk.yandex.ru/d/IeOGuQ3dVKSHhw',
+													tags: [
+														'Пост газоразборный UNISET+',
+													],
+												})(class="mix tag-3")
+												+sCatalogCard({
+													imgGroup: 2,
+													imgNum: 12,
+													title: 'Пост газоразборный HF-SET',
+													linkHref: 'https://disk.yandex.ru/d/FMccMvqu3RFGLQ',
+													tags: [
+														'Пост газоразборный HF-SET',
+													],
+												})(class="mix tag-4")
+										.cTabs-content-js
+											//-
+											+e.cards-row.row.mixit-cont-js
+												+sCatalogCard({
+													imgGroup: 3,
+													imgNum: 1,
+													title: 'Редуктор рамповый MR400',
+													linkHref: 'https://disk.yandex.ru/d/zXTvll-lui4_0g',
+													tags: [
+														'Рамповые редукторы',
+													],
+												})(class="mix tag-1")
+												+sCatalogCard({
+													imgGroup: 3,
+													imgNum: 2,
+													title: 'Редуктор рамповый CTMH',
+													linkHref: 'https://disk.yandex.ru/d/tQ74ZLFbnClI-Q',
+													tags: [
+														'Рамповые редукторы',
+													],
+												})(class="mix tag-1")
+												+sCatalogCard({
+													imgGroup: 3,
+													imgNum: 3,
+													title: 'Редуктор рамповый MFR',
+													linkHref: 'https://disk.yandex.ru/d/WIGfCWtKEUtRrQ',
+													tags: [
+														'Рамповые редукторы',
+													],
+												})(class="mix tag-1")
+												//-
+												+sCatalogCard({
+													imgGroup: 3,
+													imgNum: 4,
+													title: 'Редуктор сетевой Celtic  Junior J74 200м3',
+													linkHref: undefined,
+													tags: [
+														'Сетевые редукторы',
+													],
+												})(class="mix tag-2")
+												+sCatalogCard({
+													imgGroup: 3,
+													imgNum: 5,
+													title: 'Редуктор сетевой D1G 500м3',
+													linkHref: 'https://disk.yandex.ru/d/6Rb3f4fDmI8gww',
+													tags: [
+														'Сетевые редукторы',
+													],
+												})(class="mix tag-2")
+												+sCatalogCard({
+													imgGroup: 3,
+													imgNum: 6,
+													title: 'Редуктор сетевой LTLF 20м3',
+													linkHref: 'https://disk.yandex.ru/d/d1AMwVcQtnl4Rw',
+													tags: [
+														'Сетевые редукторы',
+													],
+												})(class="mix tag-2")
+												//-
+												+sCatalogCard({
+													imgGroup: 3,
+													imgNum: 7,
+													title: 'Редуктор сетевой LTLJ 20м3',
+													linkHref: 'https://disk.yandex.ru/d/c7Xv07GWjON4Aw',
+													tags: [
+														'Сетевые редукторы',
+													],
+												})(class="mix tag-2")
+												+sCatalogCard({
+													imgGroup: 3,
+													imgNum: 8,
+													title: 'Редуктор сетевой LTMH0SF 100м3',
+													linkHref: 'https://disk.yandex.ru/d/we1b7HuMcSz9og',
+													tags: [
+														'Сетевые редукторы',
+													],
+												})(class="mix tag-2")
+												+sCatalogCard({
+													imgGroup: 3,
+													imgNum: 9,
+													title: 'Редуктор сетевой LTMH0SJ 100м3',
+													linkHref: 'https://disk.yandex.ru/d/tAuPKv_ExesPfA',
+													tags: [
+														'Сетевые редукторы',
+													],
+												})(class="mix tag-2")
+												//-
+												+sCatalogCard({
+													imgGroup: 3,
+													imgNum: 10,
+													title: 'Редуктор сетевой UC700 50м3',
+													linkHref: undefined,
+													tags: [
+														'Сетевые редукторы',
+													],
+												})(class="mix tag-2")
+										.cTabs-content-js 
+											+e.cards-row.row
+												+sCatalogCard({
+													imgGroup: 4,
+													imgNum: 1,
+													title: 'Блок сигнализации для рампы DGM',
+													linkHref: 'https://disk.yandex.ru/d/yAix9cVtVEWoQw',
+													tags: [
+														'Аксессуары',
+													],
+												})
+												+sCatalogCard({
+													imgGroup: 4,
+													imgNum: 2,
+													title: 'Коллектор ETL для рампы 20м3',
+													linkHref: 'https://disk.yandex.ru/d/vbjjykXM-U7Xrw',
+													tags: [
+														'Аксессуары',
+													],
+												})
+												+sCatalogCard({
+													imgGroup: 4,
+													imgNum: 3,
+													title: 'Коллектор ETM для рампы 100м3',
+													linkHref: 'https://disk.yandex.ru/d/nbingqZ1ypT8qw',
+													tags: [
+														'Аксессуары',
+													],
+												})
+												//-
+												+sCatalogCard({
+													imgGroup: 4,
+													imgNum: 4,
+													title: 'Металлорукав для балона',
+													linkHref: 'https://disk.yandex.ru/d/mFWiukycl8hYQw',
+													tags: [
+														'Аксессуары',
+													],
+												})
+												+sCatalogCard({
+													imgGroup: 4,
+													imgNum: 5,
+													title: 'Подогреватель газа для рампы GGP250',
+													linkHref: 'https://disk.yandex.ru/d/BNQi-IDCLpFxqQ',
+													tags: [
+														'Аксессуары',
+													],
+												})
+						//.tabs.tabs-inner
 							.tabs__caption.tabs-inner__caption
 								+tabBtn("Балонные регуляторы для чистых газов").active
 								+tabBtn("Аксессуары для чистых газов")
@@ -139,9 +533,35 @@ mixin sCatalog(data)
 								+card(n+'7','Тележки и крепления для баллонов')
 								+card(n+'8','Рукава низкого давления')
 								+card(n+'9','Rails and Clamps')
-								+card(n+'10','Mediconnect - DUOLINE') 
-
-				
+								+card(n+'10','Mediconnect - DUOLINE')
 			+e.btn-all(href='#modal-call' data-title=`Запросить полный каталог` data-order=`Запросить полный каталог`).link-modal-js Запросить полный каталог
-
 	// end sCatalog
+
+mixin sCatalogCard(data)
+	.col-6.col-xl-4&attributes(attributes)
+		+e.card
+			if data.linkHref
+				+e.doc-btn(href=data.linkHref target="_blank" data-hint="Документация")
+					+icon('doc')
+			+e.img
+				img(loading="lazy" src=`img/@2x/sCatalogCard-${data.imgGroup}-${data.imgNum}.png` alt="")
+			+e.title(href="#")=data.title
+			+e.tags
+				-for(let tag of data.tags)
+					+e.tag=tag
+			+e.btn.link-modal-js(href="#modal-call" data-title="Запросить цену" data-order=`Запросить цену: ${data.title}`) Запросить цену
+
+mixin sCatalogDDitem(data)
+	+e.dd-item(class=`${data.addClasses || ''} ${data.addItemClasses || ''}`)
+		//-+e.dd-head its tabs(cTabs) btn and dd-head, its class 'active' dont have any style it styled by dd-item.active
+		//-two js integrations that works indepenttly from each other
+		+e.dd-head.dd-head-js.cTabs-btn-js(class=`${data.addClasses || ''}`)=data.title
+		if block
+			+e.dd-content.dd-content-js(class=`${data.addClasses || ''}`)
+				block
+
+mixin sCatalogDDChb(txt)
+	+e.LABEL.chb-item
+		input(type="checkbox" class="invisible" name=txt)&attributes(attributes)
+		.square
+		.chb-txt=txt

@@ -327,9 +327,88 @@ function eventHandler() {
 			nextEl: '.sDocumetation .swiper-button-next',
 			prevEl: '.sDocumetation .swiper-button-prev'
 		}
-	}); // var Sticky = new hcSticky('.header', {
+	}); //luckyone js
+	//.cTabs-js(=== .tabs)
+	//.cTabs-btn-js(=== .tabs__btn)
+	//.cTabs-content-group-js(=== .tabs__wrap)
+	//.cTabs-content-js(=== .tabs__content)
+
+	$('.cTabs-js').each(function () {
+		let Btns = this.querySelectorAll('.cTabs-btn-js');
+		let contentGroups = this.querySelectorAll('.cTabs-content-group-js');
+		$(Btns).click(function () {
+			$(Btns).removeClass('active');
+			$(this).addClass('active'); //let index = $(this).index();
+
+			let index = [...Btns].indexOf(this);
+			$(contentGroups).each(function () {
+				let contentItems = this.querySelectorAll('.cTabs-content-js');
+				$(contentItems).removeClass('active');
+				contentItems[index].classList.add('active');
+			});
+		});
+	}); //
+
+	function makeDDGroup() {
+		let parents = document.querySelectorAll('.dd-group-js');
+
+		for (let parent of parents) {
+			if (parent) {
+				// childHeads, kind of funny))
+				let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
+				$(ChildHeads).click(function () {
+					let clickedHead = this;
+					$(ChildHeads).each(function () {
+						if (this === clickedHead) {
+							//parent element gain toggle class, style head change via parent
+							$(this.parentElement).toggleClass('active');
+							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+								$(this).toggleClass('active');
+							});
+						} else {
+							$(this.parentElement).removeClass('active');
+							$(this.parentElement).find('.dd-content-js').slideUp(function () {
+								$(this).removeClass('active');
+							});
+						}
+					});
+				});
+			}
+		}
+	}
+
+	makeDDGroup(); //
+	// In this example, we must bind a 'change' event handler to
+	// our checkboxes, then interact with the mixer via
+	// its .filter() API methods.
+
+	let mixItContainers = document.querySelectorAll('.mixit-cont-js');
+	let mixItChbGroups = document.querySelectorAll('.mixit-chb-group-js'); //-
+
+	for (let [index, container] of Object.entries(mixItContainers)) {
+		let currentChbGroup = mixItChbGroups[index];
+		let checkboxes = currentChbGroup.querySelectorAll('input[type="checkbox"]');
+		let mixer = mixitup(container);
+		currentChbGroup.addEventListener('change', function () {
+			let selectors = []; // Iterate through all checkboxes, pushing the
+			// values of those that are checked into an array
+
+			for (let checkbox of checkboxes) {
+				if (checkbox.checked) selectors.push(checkbox.value);
+			} // If there are values in the array, join it into a string
+			// using your desired logic, and send to the mixer's .filter()
+			// method, otherwise filter by 'all'
+
+
+			let selectorString = selectors.length > 0 ? selectors.join(',') : // or '.' for AND logic
+			'all';
+			mixer.filter(selectorString);
+		});
+	} //end luckyone js
+	// var Sticky = new hcSticky('.header', {
 	// 	stickTo: 'body'
 	// });
+
 }
 
 ;

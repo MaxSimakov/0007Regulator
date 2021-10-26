@@ -119,3 +119,261 @@
 		margin-top: auto;
 	}
 }
+
+//-26.10 by lucky
+.catalogF{
+
+	&__row{
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: #{rem(40)};
+	}
+	//-filter
+	&__filter{
+		background: $white;
+		box-shadow: 0px rem(5) rem(20) rgba(0, 0, 0, 0.1);
+	}
+	&__dd-item{
+
+		&.active{
+			--dd-chv-rot: 90deg;
+			--head-col: #{$dark2};
+			--head-strip-o: 1;
+		}
+		&.no-content{
+			--dd-chv-rot: 0deg;
+		}
+
+		&:last-child{
+			--dd-bb: none;
+		}
+
+		--item-px: #{rem(20)};
+		--item-py: #{rem(28)};
+	}
+	&__dd-head{
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: var(--item-py) var(--item-px);
+		border-bottom: var(--dd-bb, #{1px solid $gray-100});
+		color: var(--head-col, #{$gray-500});
+
+		&:hover{
+			--head-col: #{$dark2};
+			--head-strip-o: 0.5;
+		}
+
+		position: relative;
+		z-index: 1;
+		&:before{
+			@include mt();
+			opacity: var(--head-strip-o, 0);
+			content: '';
+			position: absolute;
+			z-index: 2;
+			left: 0;
+			width: 2px;
+			height: 100%;
+			background-color: $blue;
+		}
+		&:after{
+			@include mt();
+			flex-shrink: 0;
+			transform: rotate(var(--dd-chv-rot, 0deg));
+			content: '';
+			display: inline-block;
+			width: rem(24);
+			height: rem(24);
+
+			background-image: url(../img/svg/chevron-right.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	}
+	&__dd-content{
+		background: $gray-200;
+		border-bottom: var(--dd-bb, #{1px solid $gray-100});
+		padding: var(--item-py) var(--item-px);
+
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	//-
+	&__chb-item{
+		@include mt();
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+
+		color: $gray-500;
+		&:hover{
+			color: $body-color;
+		}
+
+		margin-bottom: rem(15);
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		input:checked + .square{
+			&:after{
+				opacity: 1;
+			}
+		}
+		input:checked + .square + .chb-txt{
+			color: $gray-900;
+		}
+		.square{
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(24);
+			height: rem(24);
+			margin-right: rem(12);
+
+			background: $white;
+			border: 1px solid $gray-100;
+
+			position: relative;
+			z-index: 1;
+			&:after{
+				@include mt();
+				opacity: 0;
+				content: '';
+				position: absolute;
+				z-index: 1;
+				width: 50%;
+				height: 50%;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+
+				background-image: url(../img/svg/sCatalogDDitemCheck.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+
+			&:hover{
+				&:after{
+					opacity: 0.3;
+				}
+			}
+		}
+
+		.chb-txt{
+			color: inherit;
+		}
+	}
+	//-
+	&__cards-row{
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: #{rem(30)};
+	}
+	&__card{
+		text-align: center;
+		min-height: 100%;
+		background: $white;
+
+		display: flex;
+		flex-direction: column;
+
+		position: relative;
+		z-index: 1;
+
+		padding: rem(30);
+	}
+	&__doc-btn{
+		position: absolute;
+		z-index: 10;
+		top: rem(20);
+		left: rem(20);
+
+		width: rem(60);
+		height: rem(60);
+		padding: rem(10);
+		background: $gray-200;
+		border-radius: 50%;
+
+		.icon{
+			@include mt();
+			font-size: rem(30);
+			color: $input-placeholder-color;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:hover{
+			.icon{
+				color: $blue;
+			}
+			&:after{
+				--add-hint-tf: scale(1);
+			}
+		}
+		&:after{
+			@include mt();
+			//transform-origin: center bottom;
+			transform-origin: left;
+			transform: var(--add-hint-tf, scale(0)) translateX(-50%);
+			content: attr(data-hint);
+			position: absolute;
+			left: 50%;
+			bottom: calc(100% + #{rem(5)});
+			padding: rem(5);
+			background: rgba($input-placeholder-color, 0.9);
+			border-radius: rem(3);
+
+			color: $white;
+			font-weight: 500;
+			font-size: rem(12);
+			line-height: 1;
+		}
+	}
+	&__img{
+		width: 100%;
+		height: rem(200);
+		margin-bottom: rem(10);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__title{
+		display: block;
+		margin-bottom: rem(5);
+
+		color: $body-color;
+		&:hover{
+			color: $primary;
+		}
+	}
+	&__tags{
+		margin-bottom: rem(20);
+	}
+	&__tag{
+		font-size: rem(14);
+		color: $input-placeholder-color;
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		width: 100%;
+		margin-top: auto;
+	}
+	&__{}
+	&__{}
+}
