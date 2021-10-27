@@ -22,7 +22,6 @@
 			@extend .btn-outline-warning;
 			width: rem(260);
 			@include media-breakpoint-up(lg) {
-
 				margin-top: rem(65);
 			}
 			margin-top: rem(40);
@@ -276,6 +275,11 @@
 		--bs-gutter-y: #{rem(30)};
 	}
 	&__card{
+		@include mt();
+		&:hover {
+			box-shadow: $box-shadow;
+		}
+
 		text-align: center;
 		min-height: 100%;
 		background: $white;
