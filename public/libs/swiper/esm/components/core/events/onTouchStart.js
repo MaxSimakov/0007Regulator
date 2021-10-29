@@ -1,22 +1,6 @@
 import { getWindow, getDocument } from 'ssr-window';
 import $ from '../../../utils/dom';
-import { extend, now } from '../../../utils/utils'; // Modified from https://stackoverflow.com/questions/54520554/custom-element-getrootnode-closest-function-crossing-multiple-parent-shadowd
-
-function closestElement(selector, base) {
-  if (base === void 0) {
-    base = this;
-  }
-
-  function __closestFrom(el) {
-    if (!el || el === getDocument() || el === getWindow()) return null;
-    if (el.assignedSlot) el = el.assignedSlot;
-    var found = el.closest(selector);
-    return found || __closestFrom(el.getRootNode().host);
-  }
-
-  return __closestFrom(base);
-}
-
+import { extend, now } from '../../../utils/utils';
 export default function onTouchStart(event) {
   var swiper = this;
   var document = getDocument();
@@ -42,7 +26,7 @@ export default function onTouchStart(event) {
   data.isTouchEvent = e.type === 'touchstart';
   if (!data.isTouchEvent && 'which' in e && e.which === 3) return;
   if (!data.isTouchEvent && 'button' in e && e.button > 0) return;
-  if (data.isTouched && data.isMoved) return; // change target el for shadow root component
+  if (data.isTouched && data.isMoved) return; // change target el for shadow root componenet
 
   var swipingClassHasValue = !!params.noSwipingClass && params.noSwipingClass !== '';
 
@@ -50,10 +34,7 @@ export default function onTouchStart(event) {
     $targetEl = $(event.path[0]);
   }
 
-  var noSwipingSelector = params.noSwipingSelector ? params.noSwipingSelector : "." + params.noSwipingClass;
-  var isTargetShadow = !!(e.target && e.target.shadowRoot); // use closestElement for shadow root element to get the actual closest for nested shadow root element
-
-  if (params.noSwiping && (isTargetShadow ? closestElement(noSwipingSelector, e.target) : $targetEl.closest(noSwipingSelector)[0])) {
+  if (params.noSwiping && $targetEl.closest(params.noSwipingSelector ? params.noSwipingSelector : "." + params.noSwipingClass)[0]) {
     swiper.allowClick = true;
     return;
   }

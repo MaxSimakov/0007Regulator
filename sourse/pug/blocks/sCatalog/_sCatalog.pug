@@ -538,18 +538,18 @@ mixin sCatalog(data)
 	// end sCatalog
 
 mixin sCatalogCard(data)
-	.col-6.col-xl-4&attributes(attributes)
-		+e.card
-			if data.linkHref
-				+e.doc-btn(href=data.linkHref target="_blank" data-hint="Документация")
-					+icon('doc')
+	+e.col.col-6.col-xl-4&attributes(attributes)
+		if data.linkHref
+			+e.doc-btn(href=data.linkHref target="_blank" data-hint="Документация")
+				+icon('doc')
+		+e.card.link-modal-js(href="#modal-call" data-title="Запросить цену" data-order=`Запросить цену: ${data.title}`)
 			+e.img
 				img(loading="lazy" src=`img/@2x/sCatalogCard-${data.imgGroup}-${data.imgNum}.png` alt="")
 			+e.title=data.title
 			+e.tags
 				-for(let tag of data.tags)
 					+e.tag=tag
-			+e.btn.link-modal-js(href="#modal-call" data-title="Запросить цену" data-order=`Запросить цену: ${data.title}`) Запросить цену
+			+e.btn Запросить цену
 
 mixin sCatalogDDitem(data)
 	+e.dd-item(class=`${data.addClasses || ''} ${data.addItemClasses || ''}`)

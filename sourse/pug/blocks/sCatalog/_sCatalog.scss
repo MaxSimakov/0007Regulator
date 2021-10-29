@@ -27,19 +27,23 @@
 			margin-top: rem(40);
 		}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {
-		.row{
-			--bs-gutter-x: 24px;
+		
+		@include media-breakpoint-up(xl) {}
+		@include media-breakpoint-up(lg) {}
+		@include media-breakpoint-up(md) {}
+		@include media-breakpoint-up(sm) {}
+		@include media-breakpoint-between(md, xl) {}
+		@include media-breakpoint-only(xl) {}
+		@include media-breakpoint-down(xl) {
+			.row{
+				--bs-gutter-x: 24px;
+			}
 		}
-	}
-} // end.sCatalog
-
+	} // end.sCatalog
+	
+	// .catalogF__col{
+	// 	position: relative;
+	// }
 .tabs{
 	&__caption{
 		display: flex;
@@ -125,6 +129,10 @@
 	&__row{
 		--bs-gutter-x: #{rem(30)};
 		--bs-gutter-y: #{rem(40)};
+	}
+
+	&__col{
+		position: relative;
 	}
 	//-filter
 	&__filter{
@@ -296,13 +304,16 @@
 		position: absolute;
 		z-index: 10;
 		top: rem(20);
-		left: rem(20);
+		left: calc(#{rem(20)} + var(--bs-gutter-x) / 2);
 
 		width: rem(60);
 		height: rem(60);
 		padding: rem(10);
 		background: $gray-200;
 		border-radius: 50%;
+		@include mt();
+		transform: translateY(var(--op, 10px));
+		opacity: var(--op,0);
 
 		.icon{
 			@include mt();
@@ -340,6 +351,9 @@
 			font-size: rem(12);
 			line-height: 1;
 		}
+	}
+	&__col:hover{
+		--op: 1;
 	}
 	&__img{
 		width: 100%;

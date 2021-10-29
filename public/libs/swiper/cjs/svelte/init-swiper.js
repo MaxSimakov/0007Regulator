@@ -11,8 +11,7 @@ var _utils = require("./utils");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // eslint-disable-next-line
-function initSwiper(swiperParams, modules) {
-  if (modules) _core.default.use(modules);
+function initSwiper(swiperParams) {
   return new _core.default(swiperParams);
 }
 

@@ -268,15 +268,7 @@ var _default = {
       }
     },
     slideChange: function slideChange(swiper) {
-      var _swiper$params = swiper.params,
-          lazy = _swiper$params.lazy,
-          cssMode = _swiper$params.cssMode,
-          watchSlidesVisibility = _swiper$params.watchSlidesVisibility,
-          watchSlidesProgress = _swiper$params.watchSlidesProgress,
-          touchReleaseOnEdges = _swiper$params.touchReleaseOnEdges,
-          resistanceRatio = _swiper$params.resistanceRatio;
-
-      if (lazy.enabled && (cssMode || (watchSlidesVisibility || watchSlidesProgress) && (touchReleaseOnEdges || resistanceRatio === 0))) {
+      if (swiper.params.lazy.enabled && swiper.params.cssMode) {
         swiper.lazy.load();
       }
     }
