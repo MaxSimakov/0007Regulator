@@ -312,7 +312,7 @@
 		background: $gray-200;
 		border-radius: 50%;
 		@include mt();
-		transform: translateY(var(--op, 10px));
+		transform: translateY(var(--op, 5px));
 		opacity: var(--op,0);
 
 		.icon{
