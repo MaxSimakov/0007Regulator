@@ -312,8 +312,8 @@
 		background: $gray-200;
 		border-radius: 50%;
 		@include mt();
-		transform: translateY(var(--op, 5px));
-		opacity: var(--op,0);
+		// transform: translateY(var(--op, 5px));
+		// opacity: var(--op,0);
 
 		.icon{
 			@include mt();
@@ -354,6 +354,7 @@
 	}
 	&__col:hover{
 		--op: 1;
+		--add-hint-tf: scale(1);
 	}
 	&__img{
 		width: 100%;
