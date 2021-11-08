@@ -282,7 +282,9 @@
 		--bs-gutter-x: #{rem(30)};
 		--bs-gutter-y: #{rem(30)};
 	}
+	
 	&__card{
+		--bs-gutter-x: #{rem(30)};
 		@include mt();
 		&:hover {
 			box-shadow: $box-shadow;
@@ -298,7 +300,19 @@
 		position: relative;
 		z-index: 1;
 
-		padding: rem(30);
+		padding: var(--bs-gutter-x) ;
+		padding-bottom: calc(#{rem(55 )} + var(--bs-gutter-x));
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		width: 100%;
+		margin-top: auto;
+		position: absolute;
+		left: calc(var(--bs-gutter-x) * 1.5);
+		bottom: var(--bs-gutter-x);
+		z-index: 4;
+		width: calc(100% - var(--bs-gutter-x) * 3);
 	}
 	&__doc-btn{
 		position: absolute;
@@ -387,12 +401,7 @@
 		font-size: rem(14);
 		color: $input-placeholder-color;
 	}
-	&__btn{
-		@extend .btn;
-		@extend .btn-primary;
-		width: 100%;
-		margin-top: auto;
-	}
+	
 	&__{}
 	&__{}
 }
