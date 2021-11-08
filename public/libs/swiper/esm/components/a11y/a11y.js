@@ -165,13 +165,9 @@ var A11y = {
     }
 
     swiper.a11y.addElRole($(swiper.slides), params.slideRole);
-    var slidesLength = swiper.params.loop ? swiper.slides.filter(function (el) {
-      return !el.classList.contains(swiper.params.slideDuplicateClass);
-    }).length : swiper.slides.length;
-    swiper.slides.each(function (slideEl, index) {
+    swiper.slides.each(function (slideEl) {
       var $slideEl = $(slideEl);
-      var slideIndex = swiper.params.loop ? parseInt($slideEl.attr('data-swiper-slide-index'), 10) : index;
-      var ariaLabelMessage = params.slideLabelMessage.replace(/\{\{index\}\}/, slideIndex + 1).replace(/\{\{slidesLength\}\}/, slidesLength);
+      var ariaLabelMessage = params.slideLabelMessage.replace(/\{\{index\}\}/, $slideEl.index() + 1).replace(/\{\{slidesLength\}\}/, swiper.slides.length);
       swiper.a11y.addElLabel($slideEl, ariaLabelMessage);
     }); // Navigation
 

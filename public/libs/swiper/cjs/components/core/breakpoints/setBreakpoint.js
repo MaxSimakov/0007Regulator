@@ -46,7 +46,7 @@ function setBreakpoint() {
   } else if (!wasMultiRow && isMultiRow) {
     $el.addClass(params.containerModifierClass + "multirow");
 
-    if (breakpointParams.slidesPerColumnFill && breakpointParams.slidesPerColumnFill === 'column' || !breakpointParams.slidesPerColumnFill && params.slidesPerColumnFill === 'column') {
+    if (breakpointParams.slidesPerColumnFill === 'column') {
       $el.addClass(params.containerModifierClass + "multirow-column");
     }
 

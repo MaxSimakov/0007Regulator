@@ -17,7 +17,6 @@
 
   let className = undefined;
   export { className as class };
-  export let modules = null;
 
   let containerClasses = 'swiper-container';
   let breakpointChanged = false;
@@ -80,7 +79,7 @@
     },
   });
 
-  swiperInstance = initSwiper(swiperParams, modules);
+  swiperInstance = initSwiper(swiperParams);
   if (swiperInstance.virtual && swiperInstance.params.virtual.enabled) {
     const extendWith = {
       cache: false,
