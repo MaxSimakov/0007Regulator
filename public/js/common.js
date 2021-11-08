@@ -123,8 +123,16 @@ const JSCCommon = {
 	// tabs  .
 	tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			console.log(this);
-			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').eq($(this).index()).fadeIn().addClass('active').siblings().hide().removeClass('active');
+			$(this).addClass('active').siblings().removeClass('active');
+			let index = $(this).index();
+			let content = this.closest('.' + tab).querySelectorAll('.' + tab + '__content'); //-console.log(content, content[index]);
+
+			$(content).hide().removeClass('active');
+			$(content[index]).fadeIn().addClass('active'); // $(this)
+			// 	.addClass('active').siblings().removeClass('active')
+			// 	.closest('.' + tab).find('.' + tab + '__content')
+			// 	.eq($(this).index()).fadeIn().addClass('active')
+			// 	.siblings().hide().removeClass('active');
 		});
 	},
 
